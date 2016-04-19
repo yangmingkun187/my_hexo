@@ -5,6 +5,11 @@ categories: "Angularjs"
 ---
 使用Angularjs也有几个月了，在对这个比较新奇的框架赞美之外，也想把自己遇到的坑记录下来。
 <!-- more -->
+### 最近写了一个angular的调用模态框+在模态框中滚动分页加载的组件
+
+[源码地址](https://github.com/yangmingkun187/angular_modal_scroll)
+[demo地址](http://jasonyangblog.com/angular_modal_scroll/index.html)
+
 ### 对ng-click 进行trigger
 
 有一次做注册模块的时候，当用户出现登录注册信息错误或者网络错误的时候，异步请求回来会触发一次trigger事件，当时是这样写的：
