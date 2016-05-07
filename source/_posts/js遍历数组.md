@@ -3,6 +3,22 @@ date: 2014-11-17 17:52:04
 tags: "Javascript"
 categories: "Javascript"
 ---
+### js取整
+
+``` javascript
+parseInt(1.4) === ~~1.5;
+```
+
+### 复制一个数组（这里并非索引，而是一个新的数组）
+
+``` javascript
+var originArray = [1,2,3];
+var newArray = originArray.slice();
+originArray.push(4);
+console.log(originArray);// [1,2,3,4]
+console.log(newArray);// [1,2,3]
+```
+
 ### js遍历数组
 
 ##### 一般写法
