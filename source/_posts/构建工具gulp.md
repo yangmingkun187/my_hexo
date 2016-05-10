@@ -3,10 +3,7 @@ date: 2015-7-22 10:50:01
 tags: "gulp"
 categories: "构建工具"
 ---
-### gulp gulp gulp
-
-以前在thoughtworks培训的时候，使用过gulp，但只不过是[浅尝辄止](https://github.com/TWA-Eurasia/eurasia-letusgo/blob/development/gulpfile.js),前几天比较闲，所以好好研究了一下。
-<!-- more -->
+### gulp总结
 以前也是浅尝辄止的用过grunt，但是尝的不是怎么明白，因为grunt配置的东西比较多，会引用大量你实际上并不需要的对象属性，Grunt比Gulp更加频繁地操作文件系统，使用数据流的Gulp总是比Grunt快。对于一个小的LESS文件，gulpfile.js通常需要6ms，而gruntfile.js则需要大概50ms——慢8倍多。
 
 ### 安装gulp
