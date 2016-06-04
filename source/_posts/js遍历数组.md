@@ -5,6 +5,14 @@ categories: "Javascript"
 ---
 记录一些js的奇技淫巧
 <!-- more -->
+### 数组合并
+一般是使用concat函数来进行数组合并,但是如果两个数组很大的时候,会消耗大量的内存来存储新创建的数组.
+可以使用:
+``` javascript
+var array1 = [1,2,3];
+var array2 = [4,5,6];
+console.log(array1.push.apply(array1,array2));
+```
 ### 数组元素洗牌
 ``` javascript
 var array = [1,2,3,4,5];
