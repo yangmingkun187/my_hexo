@@ -40,7 +40,15 @@ function reduceArray(arr) {
 ``` javascript
 parseInt(1.4) === ~~1.5;
 ```
-
+### 将DOM元素的数组转换成数组
+当使用document.querySelector("div")函数时,获得的是DOM数组,也就是NodeList对象,但是这个对象不具有数组的函数功能,
+比如sort() map()等.为了使用这些方法,我们需要将其转化成数组.
+``` javascript
+var domDiv = document.querySelector("div");
+var array = [].slice.call(domDiv);
+// or
+var array = Array.from(domDiv);
+```
 ### 复制一个数组（这里并非索引，而是一个新的数组）
 
 ``` javascript
