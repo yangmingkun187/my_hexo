@@ -43,6 +43,9 @@ function reduceArray(arr) {
 // 第二个参数(一个数组,或者类数组的对象)会作为被调用对象的arguments值
 // 也就是说该数组的各个元素将会依次成为被调用函数的各个参数.
 ```
+### 数组截断
+长度为5的数组,但是现在只想用到前三个元素, 可以使用 <code>array.length = 3</code>
+
 ### js取整
 
 ``` javascript
