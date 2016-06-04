@@ -3,6 +3,27 @@ date: 2014-11-17 17:52:04
 tags: "Javascript"
 categories: "Javascript"
 ---
+记录一些js的奇技淫巧
+<!-- more -->
+### 数组降维
+利用concat转换:
+``` javascript
+function reduceArray(arr) {
+    var reducedArray = [];
+    for(var i = 0, len = arr.length; i < len; i++) {
+        reducedArray = reducedArray.concat(arr[i]);
+    }
+    return reducedArray;
+}
+```
+更巧妙的利用apply来实现
+``` javascript
+function reduceArray(arr) {
+    return Array.prototype.concat.apply([],arr);
+}
+这里利用apply方法的第一个参数回座位被调用函数的this值,第二个参数(一个数组,或者类数组的对象)会作为被调用对象的arguments值
+也就是说该数组的各个元素将会依次成为被调用函数的各个参数.
+```
 ### js取整
 
 ``` javascript
