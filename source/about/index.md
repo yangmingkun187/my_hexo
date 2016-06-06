@@ -1,7 +1,7 @@
 title: about
 date: 2015-10-20 18:04:28
 ---
-<blockquote class="blockquote-center">理想今年你几岁？</blockquote>
+<blockquote class="blockquote-center">一个敲代码的人</blockquote>
 <br/>
 <blockquote>最近访客</blockquote>
 
