@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+    
+    
+  <url>
+    <loc>http://www.jasonyangblog.com/2016/05/19/%E5%B8%B8%E8%A7%81%E5%89%8D%E7%AB%AF%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/</loc>
+    <lastmod>2016-06-06T09:19:19.000Z</lastmod>
+    <data>
+        <display>
+        <title>前端优化</title>
+        <pubTime>2016-05-19T03:36:42.000Z</pubTime>
+        
+        <tag>前端优化 </tag>
+         
+         
+           
+             
+              <breadCrumb title="前端性能优化" url="http://www.jasonyangblog.com/categories/%E5%89%8D%E7%AB%AF%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://www.jasonyangblog.com/2014/11/17/js%E9%81%8D%E5%8E%86%E6%95%B0%E7%BB%84/</loc>
+    <lastmod>2016-06-04T07:38:14.000Z</lastmod>
+    <data>
+        <display>
+        <title>js一些基础的东西</title>
+        <pubTime>2014-11-17T09:52:04.000Z</pubTime>
+        
+        <tag>Javascript </tag>
+         
+         
+           
+             
+              <breadCrumb title="Javascript" url="http://www.jasonyangblog.com/categories/Javascript/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://www.jasonyangblog.com/2016/03/08/%E7%A7%BB%E5%8A%A8%E5%BC%80%E5%8F%91/</loc>
+    <lastmod>2016-06-04T03:42:03.000Z</lastmod>
+    <data>
+        <display>
+        <title>移动开发</title>
+        <pubTime>2016-03-08T10:15:19.000Z</pubTime>
+        
+        <tag>移动端web开发 </tag>
+         
+         
+           
+             
+              <breadCrumb title="移动端web开发" url="http://www.jasonyangblog.com/categories/%E7%A7%BB%E5%8A%A8%E7%AB%AFweb%E5%BC%80%E5%8F%91/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://www.jasonyangblog.com/2015/07/22/%E6%9E%84%E5%BB%BA%E5%B7%A5%E5%85%B7gulp/</loc>
+    <lastmod>2016-06-04T03:22:14.000Z</lastmod>
+    <data>
+        <display>
+        <title>构建工具gulp</title>
+        <pubTime>2015-07-22T02:50:01.000Z</pubTime>
+        
+        <tag>gulp </tag>
+         
+         
+           
+             
+              <breadCrumb title="构建工具" url="http://www.jasonyangblog.com/categories/%E6%9E%84%E5%BB%BA%E5%B7%A5%E5%85%B7/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://www.jasonyangblog.com/2015/09/21/angularjs/</loc>
+    <lastmod>2016-04-19T08:54:50.000Z</lastmod>
+    <data>
+        <display>
+        <title>angularjs实践（有坑就记录）</title>
+        <pubTime>2015-09-21T06:33:35.000Z</pubTime>
+        
+        <tag>Angularjs </tag>
+         
+         
+           
+             
+              <breadCrumb title="Angularjs" url="http://www.jasonyangblog.com/categories/Angularjs/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://www.jasonyangblog.com/2015/06/11/javascript%E4%B9%8B%E5%8E%9F%E7%94%9FAjax/</loc>
+    <lastmod>2015-10-30T03:33:40.000Z</lastmod>
+    <data>
+        <display>
+        <title>javascript之原生Ajax</title>
+        <pubTime>2015-06-11T02:26:18.000Z</pubTime>
+        
+        <tag>Javascript </tag>
+         
+         
+           
+             
+              <breadCrumb title="Javascript" url="http://www.jasonyangblog.com/categories/Javascript/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://www.jasonyangblog.com/2015/10/27/angualr%E4%B8%AD%E7%9A%84service-provider-factory/</loc>
+    <lastmod>2015-10-27T10:44:50.000Z</lastmod>
+    <data>
+        <display>
+        <title>angualr中的service provider factory</title>
+        <pubTime>2015-10-27T08:23:53.000Z</pubTime>
+        
+        <tag>Angularjs </tag>
+         
+         
+           
+             
+              <breadCrumb title="Angularjs" url="http://www.jasonyangblog.com/categories/Angularjs/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://www.jasonyangblog.com/2016/10/21/P/</loc>
+    <lastmod>2015-10-27T10:42:21.000Z</lastmod>
+    <data>
+        <display>
+        <title></title>
+        <pubTime>2016-10-21T06:33:35.000Z</pubTime>
+        
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://www.jasonyangblog.com/2014/12/21/HTTP/</loc>
+    <lastmod>2015-10-21T08:23:27.000Z</lastmod>
+    <data>
+        <display>
+        <title>HTTP协议详解</title>
+        <pubTime>2014-12-21T06:12:45.000Z</pubTime>
+        
+        <tag>HTTP </tag>
+         
+         
+           
+             
+              <breadCrumb title="HTTP" url="http://www.jasonyangblog.com/categories/HTTP/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://www.jasonyangblog.com/2014/11/11/hello-world/</loc>
+    <lastmod>2015-10-21T08:15:24.000Z</lastmod>
+    <data>
+        <display>
+        <title>Hello World</title>
+        <pubTime>2014-11-10T16:00:00.000Z</pubTime>
+        
+        <tag>hexo </tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+    
+</urlset>

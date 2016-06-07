@@ -1,0 +1,731 @@
+<!doctype html>
+<html class="theme-next use-motion theme-next-mist">
+<head>
+  
+
+<meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="baidu-site-verification" content="kVOX3ey5mi" />
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+  <link rel="stylesheet" type="text/css" href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5"/>
+
+
+
+
+<link rel="stylesheet" type="text/css" href="/css/main.css?v=0.4.5.1"/>
+
+
+    <meta name="description" content="前端码农,吉他爱好者,A站老司机,吃货" />
+
+
+
+  <meta name="keywords" content="前端优化," />
+
+
+
+  <link rel="alternate" href="/atom.xml" title="JasonYang Notes" type="application/atom+xml" />
+
+
+
+  <link rel="shorticon icon" type="image/x-icon" href="/favicon.ico?v=0.4.5.1" />
+
+
+<meta name="description" content="记录一些前端性能优化的解决方案,其中有些是现在项目中已经用到,并且能够解决问题的方案,还有一些事并没有用到,但在以后的重构中会陆续用到的方案">
+<meta property="og:type" content="article">
+<meta property="og:title" content="前端优化">
+<meta property="og:url" content="http://www.jasonyangblog.com/2016/05/19/常见前端性能优化/index.html">
+<meta property="og:site_name" content="JasonYang Notes">
+<meta property="og:description" content="记录一些前端性能优化的解决方案,其中有些是现在项目中已经用到,并且能够解决问题的方案,还有一些事并没有用到,但在以后的重构中会陆续用到的方案">
+<meta property="og:updated_time" content="2016-06-06T09:19:19.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="前端优化">
+<meta name="twitter:description" content="记录一些前端性能优化的解决方案,其中有些是现在项目中已经用到,并且能够解决问题的方案,还有一些事并没有用到,但在以后的重构中会陆续用到的方案">
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var CONFIG = {
+    scheme: 'Mist',
+    sidebar: 'post'
+  };
+</script>
+
+
+
+  <title> 前端优化 | JasonYang Notes </title>
+  <script>
+  var _hmt = _hmt || [];
+  (function() {
+    var hm = document.createElement("script");
+    hm.src = "//hm.baidu.com/hm.js?122049a1c38e31ebca5d2061688fa9f4";
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(hm, s);
+  })();
+  </script>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  <!--[if lte IE 8]>
+  <div style=' clear: both; height: 59px; padding:0 0 0 15px; position: relative;margin:0 auto;'>
+    <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode">
+      <img src="http://7u2nvr.com1.z0.glb.clouddn.com/picouterie.jpg" border="0" height="42" width="820"
+           alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today or use other browser ,like chrome firefox safari."
+           style='margin-left:auto;margin-right:auto;display: block;'/>
+    </a>
+  </div>
+<![endif]-->
+  
+
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?4020724d4f4da09b33d2861276e64a8c";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+  <div class="container one-column page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><h1 class="site-meta">
+  <span class="logo-line-before"><i></i></span>
+  <a href="/" class="brand" rel="start">
+      <span class="logo">
+        <i class="icon-next-logo"></i>
+      </span>
+      <span class="site-title">JasonYang Notes</span>
+  </a>
+  <span class="logo-line-after"><i></i></span>
+</h1>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu menu-left">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            <i class="menu-item-icon icon-next-home"></i> <br />
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            <i class="menu-item-icon icon-next-categories"></i> <br />
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            <i class="menu-item-icon icon-next-archives"></i> <br />
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            <i class="menu-item-icon icon-next-tags"></i> <br />
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            <i class="menu-item-icon icon-next-about"></i> <br />
+            关于
+          </a>
+        </li>
+      
+
+      
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  
+  <form class="site-search-form">
+    <input type="text" id="st-search-input" class="st-search-input st-default-search-input" />
+  </form>
+
+
+<script type="text/javascript">
+  (function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+    (w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+    e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+  })(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+
+  _st('install', 'xzB-JrLQiF7ENndWonez','2.0.0');
+</script>
+
+
+
+    </div>
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div id="content" class="content"> 
+
+  <div id="posts" class="posts-expand">
+    
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      
+      
+        <h1 class="post-title" itemprop="name headline">
+          
+          
+            
+              前端优化
+            
+          
+        </h1>
+      
+
+      <div class="post-meta">
+        <span class="post-time">
+          发表于
+          <time itemprop="dateCreated" datetime="2016-05-19T11:36:42+08:00" content="2016-05-19">
+            2016-05-19
+          </time>
+        </span>
+
+        
+          <span class="post-category" >
+            &nbsp; | &nbsp; 分类于
+            
+              <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                <a href="/categories/前端性能优化/" itemprop="url" rel="index">
+                  <span itemprop="name">前端性能优化</span>
+                </a>
+              </span>
+
+              
+              
+
+            
+          </span>
+        
+
+        
+          
+            <span class="post-comments-count">
+              &nbsp; | &nbsp;
+              <a href="/2016/05/19/常见前端性能优化/#comments" itemprop="discussionUrl">
+                <span class="post-comments-count ds-thread-count" data-thread-key="2016/05/19/常见前端性能优化/" itemprop="commentsCount"></span>
+              </a>
+            </span>
+          
+        
+        
+      </div>
+    </header>
+
+    <div class="post-body">
+
+      
+      
+
+      
+        <span itemprop="articleBody"><p>记录一些前端性能优化的解决方案,其中有些是现在项目中已经用到,并且能够解决问题的方案,还有一些事并没有用到,但在以后的重构中会陆续用到的方案<br><a id="more"></a></p>
+<h3 id="高清图适配优化">高清图适配优化</h3><h4 id="纯色图『2X』">纯色图『2X』</h4><p>一般是类似icon的图片,在网站中会用到的地方也非常的多,当此类小icon数量比较少的话,sprite图是一种解决方案.<br>但如果会用到许多此类图片时,全部合并成 sprite 图，图片的 K 数也会很大，而且后期如果有修改的话还得重新合并 sprite 图,<br>所以这种情况推荐使用iconfont图标.我一般用<a href="http://iconfont.cn/" target="_blank" rel="external">阿里巴巴矢量图标库</a></p>
+<h4 id="非纯色图">非纯色图</h4><p>非纯色图通常用『2X』图适配，适配方案可以有很多选择：媒体查询、srcset属性、image-set属性、脚本控制。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;img src=<span class="string">"images/demo@1x.png"</span> srcset=<span class="string">"images/demo@1x.png 1x, images/demo@2x.png 2x"</span> alt=<span class="string">""</span>&gt;</span><br></pre></td></tr></table></figure></p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="class">.chain_item_icon</span><span class="rules">&#123;</span><br><span class="line">    <span class="rule"><span class="attribute">background-image</span>:<span class="value"> <span class="function">-webkit-image-set</span>(<span class="function">url</span>(<span class="string">"images/demo@1x.png"</span>) <span class="number">1</span>x, <span class="function">url</span>(<span class="string">"images/demo@2x.png"</span>) <span class="number">2</span>x)</span></span>;</span><br><span class="line">    <span class="rule"><span class="attribute">background-image</span>:<span class="value"> <span class="function">image-set</span>(<span class="function">url</span>(<span class="string">"images/demo@1x.png"</span>) <span class="number">1</span>x, <span class="function">url</span>(<span class="string">"images/demo@2x.png"</span>) <span class="number">2</span>x)</span></span>;</span><br><span class="line">&#125;</span></span><br></pre></td></tr></table></figure>
+<h4 id="设计类字体">设计类字体</h4><p>设计类字体的实现只能用图片或通过样式 @font-face 属性去实现</p>
+<ul>
+<li>图片方案：虽然可以高精度还原，兼容性强，但是每改动一处地方都需要换图，不方便维护，内容扩展性差，而且如果要适配高清设备，又得多一套图。</li>
+<li>@font-face 属性方案：字体具有矢量性，高清设备可以轻松适配，内容扩展性强，但是不同的浏览器存在渲染的差异，兼容性略弱，@font-face 字体文件大小一般又是 M 级别，会不同程度影响页面加载体验。</li>
+</ul>
+<p>推荐<a href="http://ecomfe.github.io/fontmin/tw#feature" target="_blank" rel="external">Fontmin</a></p>
+<h3 id="图片资源优化">图片资源优化</h3><p>一般图片资源会遇到”请求数多、资源浪费、加载体验”等问题.</p>
+<h4 id="减少额外请求数">减少额外请求数</h4><p>减少图片额外请求数，收益比较明显的一般有三个方法：图片合并、iconfont 图标、Base64，三个方法都有各自的优缺点：</p>
+<ul>
+<li>图片合并<br>优点：兼容性强可缓存可提前加载多态图可提升图片加载显示体验<br>缺点：维护性差、合并图片类型以及大小控制限制高、有可能造成资源浪费<br>适合：修改更新少的常驻型低色位的装饰小图</li>
+<li>Iconfont<br>优点：可缓存矢量性可控性强<br>缺点：存在浏览器渲染差异性、只能纯色、文件体积略大<br>适合：纯色图标</li>
+<li>Base64<br>优点：无额外请求<br>缺点：不可缓存、兼容性差、代码冗余、可读性差、维护不便、CPU内存耗损大<br>适合：体积小复用率低的背景装饰图标</li>
+</ul>
+<h4 id="资源按需加载">资源按需加载</h4><p>这个对于首屏可见图片以外的图片资源进行图片懒加载就可以了.自己写的一个例子<a href="https://github.com/yangmingkun187/lazyLoad" target="_blank" rel="external">lazyload</a></p>
+<h4 id="占位提示图提高加载体验">占位提示图提高加载体验</h4><p>图片加载的时间长短由很多因素决定，如服务器响应时间、用户所用网络带宽、图片大小等，但无论是哪一种情况，总有一个等待的过程，在这过程总会有一个空白时间，<br>特别是占屏面积比较大的首屏轮播大图和采取懒加载的图片，即使图片空白时间很短，用户也会有不同程度的感知，会给用户带来一种唐突或漫长等待的感觉，<br>如果加载过程给图片加上体积比较小的占位提示图，则会让用户有一个图片加载预知，当图片加载完成后再呈现给用户看，这样用户在图片加载过程中看到的都是完整的图片<br>还有当图片加载失败的时候，展示占位图，避免系统默认的图片加载失败图标出现</p>
+<h3 id="压缩源码或者图片">压缩源码或者图片</h3><p>js文件源代码可以采用混淆压缩的方式，<br>css文件的源代码可以进行普通的压缩，<br>JPG图片可以根据具体的质量来压缩为50%-70%，<br>PNG图片可以使用一些压缩软件来压缩，比如24色变成8色，去掉一些PNG格式信息等。</p>
+<h3 id="选择合适的图片格式">选择合适的图片格式</h3><p>如果图片的颜色数较多就用JPG格式，<br>如果图片的颜色数较少就用PNG格式，<br>如果能通过服务器端判断浏览器支持webP，那就用webP和SVG格式</p>
+<h3 id="开启服务器端的Gzip压缩">开启服务器端的Gzip压缩</h3><p>这对文本资源非常有效，对图片资源没多大的压缩比率</p>
+<h3 id="使用CDN">使用CDN</h3><p>或则一些公开库使用第三方提供的静态资源地址（jquery angular）。这样一方面增加并发下载量，另一方面能够和其他网站共享缓存</p>
+<h3 id="延长静态资源缓存时间">延长静态资源缓存时间</h3><p>这里要注意，要通过修改文件名的方式，确保在资源更新的时候，用户可以拉到最新的内容（时间戳 版本号）</p>
+<h3 id="小细节">小细节</h3><p>把css放在头部  把js放在页面底部</p>
+</span>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/前端优化/" rel="tag">#前端优化</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/10/21/P/" rel="prev"></a>
+            
+          </div>
+
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/03/08/移动开发/" rel="next">移动开发</a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+ </div>
+
+        
+
+        
+          <div class="comments" id="comments">
+            
+              <div class="ds-thread" data-thread-key="2016/05/19/常见前端性能优化/"
+                   data-title="前端优化" data-url="http://www.jasonyangblog.com/2016/05/19/常见前端性能优化/">
+              </div>
+            
+          </div>
+        
+      </div>
+
+      
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" src="/upload/author.jpg" alt="JasonYang" itemprop="image"/>
+          <p class="site-author-name" itemprop="name">JasonYang</p>
+        </div>
+        <p class="site-description motion-element" itemprop="description">前端码农,吉他爱好者,A站老司机,吃货</p>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">10</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          <div class="site-state-item site-state-categories">
+            <a href="/categories">
+              <span class="site-state-item-count">6</span>
+              <span class="site-state-item-name">分类</span>
+              </a>
+          </div>
+
+          <div class="site-state-item site-state-tags">
+            <a href="/tags">
+              <span class="site-state-item-count">7</span>
+              <span class="site-state-item-name">标签</span>
+              </a>
+          </div>
+
+        </nav>
+
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="menu-item-icon icon-next-feed"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/yangmingkun187" target="_blank">github</a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://www.facebook.com/jason.marz.77128" target="_blank">facebook</a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://weibo.com/2122301511/profile?topnav=1&wvr=6" target="_blank">weibo</a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://www.zhihu.com/people/yang-ming-kun-34" target="_blank">zhihu</a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+      </section>
+
+      
+        <section class="post-toc-wrap sidebar-panel-active">
+          <div class="post-toc-indicator-top post-toc-indicator"></div>
+          <div class="post-toc">
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#高清图适配优化"><span class="nav-number">1.</span> <span class="nav-text">高清图适配优化</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#纯色图『2X』"><span class="nav-number">1.1.</span> <span class="nav-text">纯色图『2X』</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#非纯色图"><span class="nav-number">1.2.</span> <span class="nav-text">非纯色图</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#设计类字体"><span class="nav-number">1.3.</span> <span class="nav-text">设计类字体</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#图片资源优化"><span class="nav-number">2.</span> <span class="nav-text">图片资源优化</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#减少额外请求数"><span class="nav-number">2.1.</span> <span class="nav-text">减少额外请求数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#资源按需加载"><span class="nav-number">2.2.</span> <span class="nav-text">资源按需加载</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#占位提示图提高加载体验"><span class="nav-number">2.3.</span> <span class="nav-text">占位提示图提高加载体验</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#压缩源码或者图片"><span class="nav-number">3.</span> <span class="nav-text">压缩源码或者图片</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#选择合适的图片格式"><span class="nav-number">4.</span> <span class="nav-text">选择合适的图片格式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#开启服务器端的Gzip压缩"><span class="nav-number">5.</span> <span class="nav-text">开启服务器端的Gzip压缩</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#使用CDN"><span class="nav-number">6.</span> <span class="nav-text">使用CDN</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#延长静态资源缓存时间"><span class="nav-number">7.</span> <span class="nav-text">延长静态资源缓存时间</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#小细节"><span class="nav-number">8.</span> <span class="nav-text">小细节</span></a></li></ol></div>
+            
+          </div>
+          <div class="post-toc-indicator-bottom post-toc-indicator"></div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner"> <div class="copyright" >
+  
+  &copy; &nbsp;  2014 - 
+  <span itemprop="copyrightYear">2016</span>
+  <span class="with-love">
+    <i class="icon-next-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">JasonYang</span>
+</div>
+
+<div class="powered-by">
+   <a class="theme-link" href="http://hexo.io">Hexo</a> 
+</div>
+
+<div class="theme-info">
+  <a class="theme-link" href="http://www.simpletour.com">
+    Simpletour 
+  </a>
+</div>
+
+
+ </div>
+    </footer>
+
+    <div class="back-to-top"></div>
+  </div>
+
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  
+  
+    
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"jasonyang187"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+    
+     
+
+    
+  
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js"></script>
+  <script type="text/javascript" src="/js/fancy-box.js?v=0.4.5.1"></script>
+
+
+  <script type="text/javascript" src="/js/helpers.js?v=0.4.5.1"></script>
+  
+
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js"></script>
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js"></script>
+
+  <script type="text/javascript" src="/js/motion_global.js?v=0.4.5.1" id="motion.global"></script>
+
+
+
+
+  <script type="text/javascript" src="/js/nav-toggle.js?v=0.4.5.1"></script>
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  
+<script type="text/javascript" src="/js/bootstrap.scrollspy.js?v=0.4.5.1" id="bootstrap.scrollspy.custom"></script>
+
+
+<script type="text/javascript" id="sidebar.toc.highlight">
+  $(document).ready(function () {
+    var tocSelector = '.post-toc';
+    var $tocSelector = $(tocSelector);
+    var activeCurrentSelector = '.active-current';
+
+    $tocSelector
+      .on('activate.bs.scrollspy', function () {
+        var $currentActiveElement = $(tocSelector + ' .active').last();
+
+        removeCurrentActiveClass();
+        $currentActiveElement.addClass('active-current');
+
+        $tocSelector[0].scrollTop = $currentActiveElement.position().top;
+      })
+      .on('clear.bs.scrollspy', function () {
+        removeCurrentActiveClass();
+      });
+
+    function removeCurrentActiveClass () {
+      $(tocSelector + ' ' + activeCurrentSelector)
+        .removeClass(activeCurrentSelector.substring(1));
+    }
+
+    function processTOC () {
+      getTOCMaxHeight();
+      toggleTOCOverflowIndicators();
+    }
+
+    function getTOCMaxHeight () {
+      var height = $('.sidebar').height() -
+                   $tocSelector.position().top -
+                   $('.post-toc-indicator-bottom').height();
+
+      $tocSelector.css('height', height);
+
+      return height;
+    }
+
+    function toggleTOCOverflowIndicators () {
+      tocOverflowIndicator(
+        '.post-toc-indicator-top',
+        $tocSelector.scrollTop() > 0 ? 'show' : 'hide'
+      );
+
+      tocOverflowIndicator(
+        '.post-toc-indicator-bottom',
+        $tocSelector.scrollTop() >= $tocSelector.find('ol').height() - $tocSelector.height() ? 'hide' : 'show'
+      )
+    }
+
+    $(document).on('sidebar.motion.complete', function () {
+      processTOC();
+    });
+
+    $('body').scrollspy({ target: tocSelector });
+    $(window).on('resize', function () {
+      if ( $('.sidebar').hasClass('sidebar-active') ) {
+        processTOC();
+      }
+    });
+
+    onScroll($tocSelector);
+
+    function onScroll (element) {
+      element.on('mousewheel DOMMouseScroll', function (event) {
+          var oe = event.originalEvent;
+          var delta = oe.wheelDelta || -oe.detail;
+
+          this.scrollTop += ( delta < 0 ? 1 : -1 ) * 30;
+          event.preventDefault();
+
+          toggleTOCOverflowIndicators();
+      });
+    }
+
+    function tocOverflowIndicator (indicator, action) {
+      var $indicator = $(indicator);
+      var opacity = action === 'show' ? 0.4 : 0;
+      $indicator.velocity ?
+        $indicator.velocity('stop').velocity({
+          opacity: opacity
+        }, { duration: 100 }) :
+        $indicator.stop().animate({
+          opacity: opacity
+        }, 100);
+    }
+
+  });
+</script>
+
+<script type="text/javascript" id="sidebar.nav">
+  $(document).ready(function () {
+    var html = $('html');
+    var TAB_ANIMATE_DURATION = 200;
+    var hasVelocity = $.isFunction(html.velocity);
+
+    $('.sidebar-nav li').on('click', function () {
+      var item = $(this);
+      var activeTabClassName = 'sidebar-nav-active';
+      var activePanelClassName = 'sidebar-panel-active';
+      if (item.hasClass(activeTabClassName)) {
+        return;
+      }
+
+      var currentTarget = $('.' + activePanelClassName);
+      var target = $('.' + item.data('target'));
+
+      hasVelocity ?
+        currentTarget.velocity('transition.slideUpOut', TAB_ANIMATE_DURATION, function () {
+          target
+            .velocity('stop')
+            .velocity('transition.slideDownIn', TAB_ANIMATE_DURATION)
+            .addClass(activePanelClassName);
+        }) :
+        currentTarget.animate({ opacity: 0 }, TAB_ANIMATE_DURATION, function () {
+          currentTarget.hide();
+          target
+            .stop()
+            .css({'opacity': 0, 'display': 'block'})
+            .animate({ opacity: 1 }, TAB_ANIMATE_DURATION, function () {
+              currentTarget.removeClass(activePanelClassName);
+              target.addClass(activePanelClassName);
+            });
+        });
+
+      item.siblings().removeClass(activeTabClassName);
+      item.addClass(activeTabClassName);
+    });
+
+    $('.post-toc a').on('click', function (e) {
+      e.preventDefault();
+      var targetSelector = escapeSelector(this.getAttribute('href'));
+      var offset = $(targetSelector).offset().top;
+      hasVelocity ?
+        html.velocity('stop').velocity('scroll', {
+          offset: offset  + 'px',
+          mobileHA: false
+        }) :
+        $('html, body').stop().animate({
+          scrollTop: offset
+        }, 500);
+    });
+
+    // Expand sidebar on post detail page by default, when post has a toc.
+    var $tocContent = $('.post-toc-content');
+    if (isDesktop() && CONFIG.sidebar === 'post') {
+      if ($tocContent.length > 0 && $tocContent.html().trim().length > 0) {
+        displaySidebar();
+      }
+    }
+  });
+</script>
+
+
+
+  <script type="text/javascript">
+    $(document).ready(function () {
+      if (CONFIG.sidebar === 'always') {
+        displaySidebar();
+      }
+      if (isMobile()) {
+        FastClick.attach(document.body);
+      }
+    });
+  </script>
+
+  
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/lazyload.js"></script>
+  <script type="text/javascript">
+    $(function () {
+      $("#posts").find('img').lazyload({
+        placeholder: "/images/loading.gif",
+        effect: "fadeIn"
+      });
+    });
+  </script>
+</body>
+</html>

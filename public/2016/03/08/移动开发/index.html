@@ -1,0 +1,749 @@
+<!doctype html>
+<html class="theme-next use-motion theme-next-mist">
+<head>
+  
+
+<meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="baidu-site-verification" content="kVOX3ey5mi" />
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+  <link rel="stylesheet" type="text/css" href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5"/>
+
+
+
+
+<link rel="stylesheet" type="text/css" href="/css/main.css?v=0.4.5.1"/>
+
+
+    <meta name="description" content="前端码农,吉他爱好者,A站老司机,吃货" />
+
+
+
+  <meta name="keywords" content="移动端web开发," />
+
+
+
+  <link rel="alternate" href="/atom.xml" title="JasonYang Notes" type="application/atom+xml" />
+
+
+
+  <link rel="shorticon icon" type="image/x-icon" href="/favicon.ico?v=0.4.5.1" />
+
+
+<meta name="description" content="记录自己在移动端web开发中遇到的问题。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="移动开发">
+<meta property="og:url" content="http://www.jasonyangblog.com/2016/03/08/移动开发/index.html">
+<meta property="og:site_name" content="JasonYang Notes">
+<meta property="og:description" content="记录自己在移动端web开发中遇到的问题。">
+<meta property="og:image" content="http://gtms01.alicdn.com/tps/i1/T1N9rZFdddXXbZIE3X-1200-900.png">
+<meta property="og:updated_time" content="2016-06-04T03:42:03.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="移动开发">
+<meta name="twitter:description" content="记录自己在移动端web开发中遇到的问题。">
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var CONFIG = {
+    scheme: 'Mist',
+    sidebar: 'post'
+  };
+</script>
+
+
+
+  <title> 移动开发 | JasonYang Notes </title>
+  <script>
+  var _hmt = _hmt || [];
+  (function() {
+    var hm = document.createElement("script");
+    hm.src = "//hm.baidu.com/hm.js?122049a1c38e31ebca5d2061688fa9f4";
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(hm, s);
+  })();
+  </script>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  <!--[if lte IE 8]>
+  <div style=' clear: both; height: 59px; padding:0 0 0 15px; position: relative;margin:0 auto;'>
+    <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode">
+      <img src="http://7u2nvr.com1.z0.glb.clouddn.com/picouterie.jpg" border="0" height="42" width="820"
+           alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today or use other browser ,like chrome firefox safari."
+           style='margin-left:auto;margin-right:auto;display: block;'/>
+    </a>
+  </div>
+<![endif]-->
+  
+
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?4020724d4f4da09b33d2861276e64a8c";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+  <div class="container one-column page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><h1 class="site-meta">
+  <span class="logo-line-before"><i></i></span>
+  <a href="/" class="brand" rel="start">
+      <span class="logo">
+        <i class="icon-next-logo"></i>
+      </span>
+      <span class="site-title">JasonYang Notes</span>
+  </a>
+  <span class="logo-line-after"><i></i></span>
+</h1>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu menu-left">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            <i class="menu-item-icon icon-next-home"></i> <br />
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            <i class="menu-item-icon icon-next-categories"></i> <br />
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            <i class="menu-item-icon icon-next-archives"></i> <br />
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            <i class="menu-item-icon icon-next-tags"></i> <br />
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            <i class="menu-item-icon icon-next-about"></i> <br />
+            关于
+          </a>
+        </li>
+      
+
+      
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  
+  <form class="site-search-form">
+    <input type="text" id="st-search-input" class="st-search-input st-default-search-input" />
+  </form>
+
+
+<script type="text/javascript">
+  (function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+    (w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+    e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+  })(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+
+  _st('install', 'xzB-JrLQiF7ENndWonez','2.0.0');
+</script>
+
+
+
+    </div>
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div id="content" class="content"> 
+
+  <div id="posts" class="posts-expand">
+    
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      
+      
+        <h1 class="post-title" itemprop="name headline">
+          
+          
+            
+              移动开发
+            
+          
+        </h1>
+      
+
+      <div class="post-meta">
+        <span class="post-time">
+          发表于
+          <time itemprop="dateCreated" datetime="2016-03-08T18:15:19+08:00" content="2016-03-08">
+            2016-03-08
+          </time>
+        </span>
+
+        
+          <span class="post-category" >
+            &nbsp; | &nbsp; 分类于
+            
+              <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                <a href="/categories/移动端web开发/" itemprop="url" rel="index">
+                  <span itemprop="name">移动端web开发</span>
+                </a>
+              </span>
+
+              
+              
+
+            
+          </span>
+        
+
+        
+          
+            <span class="post-comments-count">
+              &nbsp; | &nbsp;
+              <a href="/2016/03/08/移动开发/#comments" itemprop="discussionUrl">
+                <span class="post-comments-count ds-thread-count" data-thread-key="2016/03/08/移动开发/" itemprop="commentsCount"></span>
+              </a>
+            </span>
+          
+        
+        
+      </div>
+    </header>
+
+    <div class="post-body">
+
+      
+      
+
+      
+        <span itemprop="articleBody"><p>记录自己在移动端web开发中遇到的问题。</p>
+<a id="more"></a>
+<h3 id="一，页面点击事件问题汇总">一，页面点击事件问题汇总</h3><h4 id="移动端tab事件，label_、img点击后会出现半透明黑框">移动端tab事件，label 、img点击后会出现半透明黑框</h4><p>需要加上样式：-webkit-tap-highlight-color:transparent;</p>
+<h4 id="移动端点击事件">移动端点击事件</h4><p>移动端click事件延迟300ms<br>这要追溯至 2007 年初。苹果公司在发布首款 iPhone 前夕，遇到一个问题：当时的网站都是为大屏幕设备所设计的。于是苹果的工程师们做了一些约定，应对 iPhone 这种小屏幕浏览桌面端站点的问题。<br>这当中最出名的，当属双击缩放(double tap to zoom)，这也是会有上述 300 毫秒延迟的主要原因。双击缩放，顾名思义，即用手指在屏幕上快速点击两次，iOS 自带的 Safari 浏览器会将网页缩放至原始比例。<br>那么这和 300 毫秒延迟有什么联系呢？<br>假定这么一个场景。用户在 iOS Safari 里边点击了一个链接。由于用户可以进行双击缩放或者双击滚动的操作，当用户一次点击屏幕之后，浏览器并不能立刻判断用户是确实要打开这个链接，还是想要进行双击操作。因此，iOS Safari 就等待 300 毫秒，以判断用户是否再次点击了屏幕。<br>鉴于iPhone的成功，其他移动浏览器都复制了 iPhone Safari 浏览器的多数约定，包括双击缩放，几乎现在所有的移动端浏览器都有这个功能。之前人们刚刚接触移动端的页面，在欣喜的时候往往不会care这个300ms的延时问题，可是如今touch端界面如雨后春笋，用户对体验的要求也更高，这300ms带来的卡顿慢慢变得让人难以接受。<br><a href="http://www.xiaomeiti.com/note/3585" target="_blank" rel="external">参考文章</a></p>
+<ul>
+<li>解决办法：</li>
+</ul>
+<ol>
+<li><p>直接使用 fastclick<br>优点：全局引入，方便省事<br>缺点：增加插件冗余</p>
+</li>
+<li><p>使用 zepto touch<br>优点：基于 zepto 核心，还提供 singleTap, doubleTap, longTap, swipe 等简单触控类型判断。<br>缺点：坑多，例如使用 setTimeout 延迟触发事件，需要解决点透问题。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="string">".close-btn"</span>).on(<span class="string">"tap"</span>, <span class="function"><span class="keyword">function</span> (<span class="params">event</span>) </span>&#123;</span><br><span class="line">   setTimeout(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">     alert(<span class="string">'点我了'</span>);</span><br><span class="line">   &#125;,<span class="number">301</span>);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>直接原生绑定 touchstart / touchend<br>优点：除了减少插件依赖，好像没想到什么优点。<br>缺点：需要处理 touchmove scroll 的一些误杀。也不一定就解决快，原生往往预示着需要自己处理一大堆东西。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="string">".close-btn"</span>).on(<span class="string">"touchend"</span>, <span class="function"><span class="keyword">function</span> (<span class="params">event</span>) </span>&#123;</span><br><span class="line">   event.preventDefault();</span><br><span class="line">   alert(<span class="string">'点我了'</span>);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>还有 Android 上 Chrome 会根据 viewport 设置 user-scalable=no 禁用双击等等。</p>
+</li>
+</ol>
+<h3 id="二，移动端css兼容性问题汇总">二，移动端css兼容性问题汇总</h3><h4 id="flex布局问题">flex布局问题</h4><ul>
+<li>使用块级元素作为flex元素的子元素；<br>Android Browser4.3及以下，iOS Safari6.1及以下 的 flex子项 需要使用块级元素，在这些版本之上还可以使用行内块元素<br>在这些版本中，如果你发现flex子项之间出现了间隙，或者在未定义换行的情况下子项自身抑或子项之间换行了，或者出现了其它不正常的情况，那么仔细看一下flex子项可能是使用了行内级元素；</li>
+<li>当横向布局时，给flex元素的子元素定义width为非auto的值，当纵向布局时，给flex元素的子元素定义height为非auto的值；<br>Android Browser4.3及以下，iOS Safari6.1及以下的flex元素的子元素如果没有显式的定义height或width为非auto的值，那么子元素分配父元素剩余空间时将会不符合标准预期；</li>
+</ul>
+<h4 id="css画一个圆">css画一个圆</h4><p>用CSS画一个圆很简单，只需要一句代码：<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="class">.circle</span> <span class="rules">&#123;</span><br><span class="line">    <span class="rule"><span class="attribute">border-radius</span>:<span class="value"> <span class="number">50%</span></span></span>;</span><br><span class="line">&#125;</span></span><br></pre></td></tr></table></figure></p>
+<p>但是Android Browser2.0 不支持以百分比作为 <code>border-radius</code> 的值，所以会显示为默认的矩形。<br>解决办法(给定数值)：<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="class">.circle</span> <span class="rules">&#123;</span><br><span class="line">    <span class="rule"><span class="attribute">width</span>:<span class="value"> <span class="number">10rem</span></span></span>;</span><br><span class="line">    <span class="rule"><span class="attribute">height</span>:<span class="value"> <span class="number">10rem</span></span></span>;</span><br><span class="line">    <span class="rule"><span class="attribute">border-radius</span>:<span class="value"> <span class="number">5rem</span></span></span>;</span><br><span class="line">&#125;</span></span><br></pre></td></tr></table></figure></p>
+<h3 id="三，移动端渲染问题汇总">三，移动端渲染问题汇总</h3><h4 id="使用rem解决不同屏幕大小的字号显示">使用rem解决不同屏幕大小的字号显示</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">(<span class="function"><span class="keyword">function</span> (<span class="params">doc, win</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">var</span> docEl = doc.documentElement,</span><br><span class="line">    resizeEvt = <span class="string">'orientationchange'</span> <span class="keyword">in</span> <span class="built_in">window</span> ? <span class="string">'orientationchange'</span> : <span class="string">'resize'</span>,</span><br><span class="line">    recalc = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">      <span class="keyword">var</span> clientWidth = docEl.clientWidth;</span><br><span class="line">      <span class="keyword">if</span> (!clientWidth) <span class="keyword">return</span>;</span><br><span class="line">      docEl.style.fontSize = <span class="number">20</span> * (clientWidth / <span class="number">320</span>) + <span class="string">'px'</span>;</span><br><span class="line">    &#125;;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">if</span> (!doc.addEventListener) <span class="keyword">return</span>;</span><br><span class="line">  win.addEventListener(resizeEvt, recalc, <span class="literal">false</span>);</span><br><span class="line">  doc.addEventListener(<span class="string">'DOMContentLoaded'</span>, recalc, <span class="literal">false</span>);</span><br><span class="line">&#125;)(<span class="built_in">document</span>, <span class="built_in">window</span>);</span><br></pre></td></tr></table></figure>
+<h4 id="避免首屏图片或者内容挤住一坨">避免首屏图片或者内容挤住一坨</h4><p>当页面高度不定，需要js计算高度，或者图片较多时，可以在body（父元素层）加上 visibility:hidden; 当页面加载完成或者js执行后再移除该样式。这样可以避免图片或者内容挤住一坨；</p>
+<h4 id="UC浏览器下使用rem的问题">UC浏览器下使用rem的问题</h4><p>最近将微站转向wap版，之前微站端使用rem，但是在安卓手机UC浏览器上rem好像没有起作用。网上的说法是要让页面进行重绘，但是试过那些建议的办法，并没有卵用，<br><a href="http://www.css88.com/archives/4996" target="_blank" rel="external">点击查看页面重绘的方法</a><br>解决办法：<br>之前写过使用rem解决不同屏幕大小的字号显示，只需要在里面多加一段代码<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">(<span class="function"><span class="keyword">function</span> (<span class="params">doc, win</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">var</span> docEl = doc.documentElement,</span><br><span class="line">    resizeEvt = <span class="string">'orientationchange'</span> <span class="keyword">in</span> <span class="built_in">window</span> ? <span class="string">'orientationchange'</span> : <span class="string">'resize'</span>,</span><br><span class="line">    recalc = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">      <span class="keyword">var</span> clientWidth = docEl.clientWidth;</span><br><span class="line">      <span class="keyword">if</span> (!clientWidth) <span class="keyword">return</span>;</span><br><span class="line">      <span class="comment">// 针对uc横竖屏rem html没有重绘的问题</span></span><br><span class="line">      <span class="keyword">var</span> style;</span><br><span class="line">      <span class="keyword">if</span>(style=<span class="built_in">document</span>.getElementById(<span class="string">"hackUCRem"</span>))&#123;</span><br><span class="line">         style.parentNode.removeChild(style);</span><br><span class="line">      &#125;</span><br><span class="line">      style = <span class="built_in">document</span>.createElement(<span class="string">"style"</span>);</span><br><span class="line">      style.id=<span class="string">"hackUCRem"</span>;</span><br><span class="line">      <span class="built_in">document</span>.head.appendChild(style);</span><br><span class="line">      <span class="comment">// 在head中加入一个style标签，插入属性 html&#123;font-size: 22px !important;&#125;</span></span><br><span class="line">      style.appendChild(<span class="built_in">document</span>.createTextNode(<span class="string">"html&#123;font-size:"</span>+<span class="number">20</span> * (clientWidth / <span class="number">320</span>)+<span class="string">"px !important;&#125;"</span>));</span><br><span class="line">      <span class="comment">// 常规写法</span></span><br><span class="line">      docEl.style.fontSize = <span class="number">20</span> * (clientWidth / <span class="number">320</span>) + <span class="string">'px'</span>;</span><br><span class="line">    &#125;;</span><br><span class="line">  recalc();</span><br><span class="line">  <span class="keyword">if</span> (!doc.addEventListener) <span class="keyword">return</span>;</span><br><span class="line">  win.addEventListener(resizeEvt, recalc, <span class="literal">false</span>);</span><br><span class="line">  doc.addEventListener(<span class="string">'DOMContentLoaded'</span>, recalc, <span class="literal">false</span>);</span><br><span class="line">&#125;)(<span class="built_in">document</span>, <span class="built_in">window</span>);</span><br></pre></td></tr></table></figure></p>
+<h4 id="高清屏1px的问题">高清屏1px的问题</h4><ul>
+<li>解决办法：<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="class">.border-image-1px</span> <span class="rules">&#123;</span><br><span class="line">    <span class="rule"><span class="attribute">border-width</span>:<span class="value"> <span class="number">1px</span> <span class="number">0px</span></span></span>;</span><br><span class="line">    <span class="rule"><span class="attribute">-webkit-border-image</span>:<span class="value"> <span class="function">url</span>(<span class="string">"data:image/png;base64,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"</span>) <span class="number">2</span> <span class="number">0</span> stretch</span></span>;</span><br><span class="line">&#125;</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="四，移动端切屏问题汇总">四，移动端切屏问题汇总</h3><h4 id="同屏切换的问题">同屏切换的问题</h4><p>使用transform实现同屏切换后，在当前屏点击后退键，我们期望的是回到前一屏，但是实际上会回到前一个页面。因为同屏切换url并没有变，只是页面上的可视区域变了。<br>解决办法：<br>在切屏操作的时候，执行下面：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span>(history.pushState)&#123;</span><br><span class="line">    history.pushState(<span class="string">'status'</span>,<span class="string">''</span>,location.href.split(<span class="string">'?'</span>)[<span class="number">0</span>]+<span class="string">'?status'</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>然后监听popstate：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span>(history.pushState)&#123;</span><br><span class="line">    <span class="built_in">window</span>.addEventListener(<span class="string">'popstate'</span>,<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        <span class="comment">// 点击后退键执行的操作</span></span><br><span class="line">    &#125;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p><img src="http://gtms01.alicdn.com/tps/i1/T1N9rZFdddXXbZIE3X-1200-900.png" alt="Alt text"></p>
+<h4 id="移动端滑动切屏（当滑动过快时，注意当前的页面是否是touchstart时的页面，需做判断）">移动端滑动切屏（当滑动过快时，注意当前的页面是否是touchstart时的页面，需做判断）</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> startPosition,</span><br><span class="line">    endPosition,</span><br><span class="line">    $current;</span><br><span class="line">$(<span class="built_in">document</span>)[<span class="number">0</span>].addEventListener(<span class="string">'touchstart'</span>,<span class="function"><span class="keyword">function</span>(<span class="params">e</span>) </span>&#123;</span><br><span class="line">    $current = $(<span class="string">'.current'</span>); <span class="comment">// 得到当前页面</span></span><br><span class="line">    <span class="keyword">var</span> touch = e.touches[<span class="number">0</span>];</span><br><span class="line">    startPosition = &#123;</span><br><span class="line">        x:touch.pageX,</span><br><span class="line">        y:touch.pageY</span><br><span class="line">    &#125;;</span><br><span class="line">    endPosition = &#123;</span><br><span class="line">        x:touch.pageX,</span><br><span class="line">        y:touch.pageY</span><br><span class="line">    &#125;</span><br><span class="line">&#125;);</span><br><span class="line">$(<span class="built_in">document</span>)[<span class="number">0</span>].addEventListener(<span class="string">'touchmove'</span>,<span class="function"><span class="keyword">function</span>(<span class="params">e</span>)</span>&#123;</span><br><span class="line">    e.preventDefault();</span><br><span class="line">    e.stopPropagation();</span><br><span class="line">    <span class="keyword">var</span> touch = e.touches[<span class="number">0</span>];</span><br><span class="line">    endPosition = &#123;</span><br><span class="line">        x:touch.pageX,</span><br><span class="line">        y:touch.pageY</span><br><span class="line">    &#125;</span><br><span class="line">&#125;)</span><br><span class="line">$(<span class="built_in">document</span>)[<span class="number">0</span>].addEventListener(<span class="string">'touchend'</span>,<span class="function"><span class="keyword">function</span>(<span class="params">e</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">var</span> distance = startPosition.y-endPosition.y;</span><br><span class="line"><span class="comment">//判断此时的页面是否是touchstart时的页面</span></span><br><span class="line">    <span class="keyword">if</span>($current[<span class="number">0</span>] == $(<span class="keyword">this</span>).find(<span class="string">'.current'</span>)[<span class="number">0</span>]) &#123;</span><br><span class="line">        <span class="keyword">if</span> ($current.hasClass(<span class="string">'question1'</span>)) &#123;</span><br><span class="line"></span><br><span class="line">            <span class="keyword">if</span>(distance &gt; <span class="number">0</span> &amp;&amp; distance &gt; <span class="number">50</span>) &#123;</span><br><span class="line">                $current.next(<span class="string">'.question'</span>).removeClass(<span class="string">'down transition'</span>);</span><br><span class="line">                $current.removeClass(<span class="string">'current'</span>).addClass(<span class="string">'up transition'</span>);</span><br><span class="line">                $current.next(<span class="string">'.question'</span>).addClass(<span class="string">'current transition'</span>);</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">        &#125; <span class="keyword">else</span> <span class="keyword">if</span>($current.hasClass(<span class="string">'question4'</span>)) &#123;</span><br><span class="line"></span><br><span class="line">            <span class="keyword">if</span>(distance &lt; <span class="number">0</span> &amp;&amp; distance &lt; -<span class="number">50</span>) &#123;</span><br><span class="line">                $current.prev(<span class="string">'.question'</span>).removeClass(<span class="string">'up transition'</span>);</span><br><span class="line">                $current.removeClass(<span class="string">'current'</span>).addClass(<span class="string">'down transition'</span>);</span><br><span class="line">                $current.prev(<span class="string">'.question'</span>).addClass(<span class="string">'current transition'</span>);</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            <span class="keyword">if</span>(distance &gt; <span class="number">0</span> &amp;&amp; distance &gt; <span class="number">50</span>) &#123;</span><br><span class="line">                $current.next(<span class="string">'.question'</span>).removeClass(<span class="string">'down transition'</span>);</span><br><span class="line">                $current.removeClass(<span class="string">'current'</span>).addClass(<span class="string">'up transition'</span>);</span><br><span class="line">                $current.next(<span class="string">'.question'</span>).addClass(<span class="string">'current transition'</span>);</span><br><span class="line">            &#125; <span class="keyword">else</span> <span class="keyword">if</span>(distance &lt; <span class="number">0</span> &amp;&amp; distance &lt; -<span class="number">50</span>) &#123;</span><br><span class="line">                $current.prev(<span class="string">'.question'</span>).removeClass(<span class="string">'up transition'</span>);</span><br><span class="line">                $current.removeClass(<span class="string">'current'</span>).addClass(<span class="string">'down transition'</span>);</span><br><span class="line">                $current.prev(<span class="string">'.question'</span>).addClass(<span class="string">'current transition'</span>);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<h4 id="微信web开发，当使用transform+transition进行切屏时，由于性能问题在部分安卓中，会出现切回原页面后不能滑动的问题">微信web开发，当使用transform+transition进行切屏时，由于性能问题在部分安卓中，会出现切回原页面后不能滑动的问题</h4><p>主要原因：因为当执行transition动画后，存在延迟，会导致切屏后的块继续存在，继而挡住了你要滑动的块<br>解决办法：切回原来屏幕后使用setTimeout函数将切屏后的块hide()掉，setTimeout函数延时的值就设置transition延时的值。（记得切屏时将其show()出来）</p>
+<h3 id="五，莫名其妙的问题汇总">五，莫名其妙的问题汇总</h3><h4 id="安卓机当在页面上有input框时，input框获取焦点时，键盘升上来时，html会被压缩，导致出现白底">安卓机当在页面上有input框时，input框获取焦点时，键盘升上来时，html会被压缩，导致出现白底</h4><p>解决办法：将html、body设置最小高度为100%</p>
+<h4 id="iscroll5_的上拉加载，下拉刷新">iscroll5 的上拉加载，下拉刷新</h4><p>iscroll4之前有这个功能，但是在iscroll5里面被移除了，<br>github上，我写了一个针对iscroll5实现上拉加载，下拉刷新功能的demo <a href="https://github.com/yangmingkun187/isrcoll5-fresh-demo.git" target="_blank" rel="external">isrcoll5-fresh-demo</a></p>
+<h4 id="标签跳转后保存表单数据">标签跳转后保存表单数据</h4><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">meta</span> <span class="attribute">name</span>=<span class="value">"save"</span> <span class="attribute">content</span>=<span class="value">"history"</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h4 id="当在可滚动区域里面设置_-webkit-overflow-scrolling:touch_时,在ios下使用fixed布局滑动时会出现抖动">当在可滚动区域里面设置 <code>-webkit-overflow-scrolling:touch</code> 时,在ios下使用fixed布局滑动时会出现抖动</h4><p>问题描述:开发中遇到一个在页面里面正常布局的div块,当页面滑动到该div块时将起fixed到顶部,但是在ios中发现当起fixed布局后会出现该块在滑动时抖动<br>,以及滚动时消失滚动后才出现的情况,最后发现是因为-webkit-overflow-scrolling:touch的问题.<br>解决办法:<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span>(<span class="built_in">window</span>.navigator.userAgent.indexOf(<span class="string">'Mac OS X'</span>) != <span class="string">'-1'</span>)&#123;</span><br><span class="line">    $(<span class="string">'.filter-box-space'</span>).addClass(<span class="string">'sticky'</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>对用户设备进行判断,如果是ios系统,则使用sticky布局,非ios则使用fixed布局.</p>
+</span>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/移动端web开发/" rel="tag">#移动端web开发</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/05/19/常见前端性能优化/" rel="prev">前端优化</a>
+            
+          </div>
+
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2015/10/27/angualr中的service-provider-factory/" rel="next">angualr中的service provider factory</a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+ </div>
+
+        
+
+        
+          <div class="comments" id="comments">
+            
+              <div class="ds-thread" data-thread-key="2016/03/08/移动开发/"
+                   data-title="移动开发" data-url="http://www.jasonyangblog.com/2016/03/08/移动开发/">
+              </div>
+            
+          </div>
+        
+      </div>
+
+      
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" src="/upload/author.jpg" alt="JasonYang" itemprop="image"/>
+          <p class="site-author-name" itemprop="name">JasonYang</p>
+        </div>
+        <p class="site-description motion-element" itemprop="description">前端码农,吉他爱好者,A站老司机,吃货</p>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">10</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          <div class="site-state-item site-state-categories">
+            <a href="/categories">
+              <span class="site-state-item-count">6</span>
+              <span class="site-state-item-name">分类</span>
+              </a>
+          </div>
+
+          <div class="site-state-item site-state-tags">
+            <a href="/tags">
+              <span class="site-state-item-count">7</span>
+              <span class="site-state-item-name">标签</span>
+              </a>
+          </div>
+
+        </nav>
+
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="menu-item-icon icon-next-feed"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/yangmingkun187" target="_blank">github</a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://www.facebook.com/jason.marz.77128" target="_blank">facebook</a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://weibo.com/2122301511/profile?topnav=1&wvr=6" target="_blank">weibo</a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://www.zhihu.com/people/yang-ming-kun-34" target="_blank">zhihu</a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+      </section>
+
+      
+        <section class="post-toc-wrap sidebar-panel-active">
+          <div class="post-toc-indicator-top post-toc-indicator"></div>
+          <div class="post-toc">
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#一，页面点击事件问题汇总"><span class="nav-number">1.</span> <span class="nav-text">一，页面点击事件问题汇总</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#移动端tab事件，label_、img点击后会出现半透明黑框"><span class="nav-number">1.1.</span> <span class="nav-text">移动端tab事件，label 、img点击后会出现半透明黑框</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#移动端点击事件"><span class="nav-number">1.2.</span> <span class="nav-text">移动端点击事件</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#二，移动端css兼容性问题汇总"><span class="nav-number">2.</span> <span class="nav-text">二，移动端css兼容性问题汇总</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#flex布局问题"><span class="nav-number">2.1.</span> <span class="nav-text">flex布局问题</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#css画一个圆"><span class="nav-number">2.2.</span> <span class="nav-text">css画一个圆</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#三，移动端渲染问题汇总"><span class="nav-number">3.</span> <span class="nav-text">三，移动端渲染问题汇总</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#使用rem解决不同屏幕大小的字号显示"><span class="nav-number">3.1.</span> <span class="nav-text">使用rem解决不同屏幕大小的字号显示</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#避免首屏图片或者内容挤住一坨"><span class="nav-number">3.2.</span> <span class="nav-text">避免首屏图片或者内容挤住一坨</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#UC浏览器下使用rem的问题"><span class="nav-number">3.3.</span> <span class="nav-text">UC浏览器下使用rem的问题</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#高清屏1px的问题"><span class="nav-number">3.4.</span> <span class="nav-text">高清屏1px的问题</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#四，移动端切屏问题汇总"><span class="nav-number">4.</span> <span class="nav-text">四，移动端切屏问题汇总</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#同屏切换的问题"><span class="nav-number">4.1.</span> <span class="nav-text">同屏切换的问题</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#移动端滑动切屏（当滑动过快时，注意当前的页面是否是touchstart时的页面，需做判断）"><span class="nav-number">4.2.</span> <span class="nav-text">移动端滑动切屏（当滑动过快时，注意当前的页面是否是touchstart时的页面，需做判断）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#微信web开发，当使用transform+transition进行切屏时，由于性能问题在部分安卓中，会出现切回原页面后不能滑动的问题"><span class="nav-number">4.3.</span> <span class="nav-text">微信web开发，当使用transform+transition进行切屏时，由于性能问题在部分安卓中，会出现切回原页面后不能滑动的问题</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#五，莫名其妙的问题汇总"><span class="nav-number">5.</span> <span class="nav-text">五，莫名其妙的问题汇总</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#安卓机当在页面上有input框时，input框获取焦点时，键盘升上来时，html会被压缩，导致出现白底"><span class="nav-number">5.1.</span> <span class="nav-text">安卓机当在页面上有input框时，input框获取焦点时，键盘升上来时，html会被压缩，导致出现白底</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#iscroll5_的上拉加载，下拉刷新"><span class="nav-number">5.2.</span> <span class="nav-text">iscroll5 的上拉加载，下拉刷新</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#标签跳转后保存表单数据"><span class="nav-number">5.3.</span> <span class="nav-text">标签跳转后保存表单数据</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#当在可滚动区域里面设置_-webkit-overflow-scrolling:touch_时,在ios下使用fixed布局滑动时会出现抖动"><span class="nav-number">5.4.</span> <span class="nav-text">当在可滚动区域里面设置 -webkit-overflow-scrolling:touch 时,在ios下使用fixed布局滑动时会出现抖动</span></a></li></ol></li></ol></div>
+            
+          </div>
+          <div class="post-toc-indicator-bottom post-toc-indicator"></div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner"> <div class="copyright" >
+  
+  &copy; &nbsp;  2014 - 
+  <span itemprop="copyrightYear">2016</span>
+  <span class="with-love">
+    <i class="icon-next-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">JasonYang</span>
+</div>
+
+<div class="powered-by">
+   <a class="theme-link" href="http://hexo.io">Hexo</a> 
+</div>
+
+<div class="theme-info">
+  <a class="theme-link" href="http://www.simpletour.com">
+    Simpletour 
+  </a>
+</div>
+
+
+ </div>
+    </footer>
+
+    <div class="back-to-top"></div>
+  </div>
+
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  
+  
+    
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"jasonyang187"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+    
+     
+
+    
+  
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js"></script>
+  <script type="text/javascript" src="/js/fancy-box.js?v=0.4.5.1"></script>
+
+
+  <script type="text/javascript" src="/js/helpers.js?v=0.4.5.1"></script>
+  
+
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js"></script>
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js"></script>
+
+  <script type="text/javascript" src="/js/motion_global.js?v=0.4.5.1" id="motion.global"></script>
+
+
+
+
+  <script type="text/javascript" src="/js/nav-toggle.js?v=0.4.5.1"></script>
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  
+<script type="text/javascript" src="/js/bootstrap.scrollspy.js?v=0.4.5.1" id="bootstrap.scrollspy.custom"></script>
+
+
+<script type="text/javascript" id="sidebar.toc.highlight">
+  $(document).ready(function () {
+    var tocSelector = '.post-toc';
+    var $tocSelector = $(tocSelector);
+    var activeCurrentSelector = '.active-current';
+
+    $tocSelector
+      .on('activate.bs.scrollspy', function () {
+        var $currentActiveElement = $(tocSelector + ' .active').last();
+
+        removeCurrentActiveClass();
+        $currentActiveElement.addClass('active-current');
+
+        $tocSelector[0].scrollTop = $currentActiveElement.position().top;
+      })
+      .on('clear.bs.scrollspy', function () {
+        removeCurrentActiveClass();
+      });
+
+    function removeCurrentActiveClass () {
+      $(tocSelector + ' ' + activeCurrentSelector)
+        .removeClass(activeCurrentSelector.substring(1));
+    }
+
+    function processTOC () {
+      getTOCMaxHeight();
+      toggleTOCOverflowIndicators();
+    }
+
+    function getTOCMaxHeight () {
+      var height = $('.sidebar').height() -
+                   $tocSelector.position().top -
+                   $('.post-toc-indicator-bottom').height();
+
+      $tocSelector.css('height', height);
+
+      return height;
+    }
+
+    function toggleTOCOverflowIndicators () {
+      tocOverflowIndicator(
+        '.post-toc-indicator-top',
+        $tocSelector.scrollTop() > 0 ? 'show' : 'hide'
+      );
+
+      tocOverflowIndicator(
+        '.post-toc-indicator-bottom',
+        $tocSelector.scrollTop() >= $tocSelector.find('ol').height() - $tocSelector.height() ? 'hide' : 'show'
+      )
+    }
+
+    $(document).on('sidebar.motion.complete', function () {
+      processTOC();
+    });
+
+    $('body').scrollspy({ target: tocSelector });
+    $(window).on('resize', function () {
+      if ( $('.sidebar').hasClass('sidebar-active') ) {
+        processTOC();
+      }
+    });
+
+    onScroll($tocSelector);
+
+    function onScroll (element) {
+      element.on('mousewheel DOMMouseScroll', function (event) {
+          var oe = event.originalEvent;
+          var delta = oe.wheelDelta || -oe.detail;
+
+          this.scrollTop += ( delta < 0 ? 1 : -1 ) * 30;
+          event.preventDefault();
+
+          toggleTOCOverflowIndicators();
+      });
+    }
+
+    function tocOverflowIndicator (indicator, action) {
+      var $indicator = $(indicator);
+      var opacity = action === 'show' ? 0.4 : 0;
+      $indicator.velocity ?
+        $indicator.velocity('stop').velocity({
+          opacity: opacity
+        }, { duration: 100 }) :
+        $indicator.stop().animate({
+          opacity: opacity
+        }, 100);
+    }
+
+  });
+</script>
+
+<script type="text/javascript" id="sidebar.nav">
+  $(document).ready(function () {
+    var html = $('html');
+    var TAB_ANIMATE_DURATION = 200;
+    var hasVelocity = $.isFunction(html.velocity);
+
+    $('.sidebar-nav li').on('click', function () {
+      var item = $(this);
+      var activeTabClassName = 'sidebar-nav-active';
+      var activePanelClassName = 'sidebar-panel-active';
+      if (item.hasClass(activeTabClassName)) {
+        return;
+      }
+
+      var currentTarget = $('.' + activePanelClassName);
+      var target = $('.' + item.data('target'));
+
+      hasVelocity ?
+        currentTarget.velocity('transition.slideUpOut', TAB_ANIMATE_DURATION, function () {
+          target
+            .velocity('stop')
+            .velocity('transition.slideDownIn', TAB_ANIMATE_DURATION)
+            .addClass(activePanelClassName);
+        }) :
+        currentTarget.animate({ opacity: 0 }, TAB_ANIMATE_DURATION, function () {
+          currentTarget.hide();
+          target
+            .stop()
+            .css({'opacity': 0, 'display': 'block'})
+            .animate({ opacity: 1 }, TAB_ANIMATE_DURATION, function () {
+              currentTarget.removeClass(activePanelClassName);
+              target.addClass(activePanelClassName);
+            });
+        });
+
+      item.siblings().removeClass(activeTabClassName);
+      item.addClass(activeTabClassName);
+    });
+
+    $('.post-toc a').on('click', function (e) {
+      e.preventDefault();
+      var targetSelector = escapeSelector(this.getAttribute('href'));
+      var offset = $(targetSelector).offset().top;
+      hasVelocity ?
+        html.velocity('stop').velocity('scroll', {
+          offset: offset  + 'px',
+          mobileHA: false
+        }) :
+        $('html, body').stop().animate({
+          scrollTop: offset
+        }, 500);
+    });
+
+    // Expand sidebar on post detail page by default, when post has a toc.
+    var $tocContent = $('.post-toc-content');
+    if (isDesktop() && CONFIG.sidebar === 'post') {
+      if ($tocContent.length > 0 && $tocContent.html().trim().length > 0) {
+        displaySidebar();
+      }
+    }
+  });
+</script>
+
+
+
+  <script type="text/javascript">
+    $(document).ready(function () {
+      if (CONFIG.sidebar === 'always') {
+        displaySidebar();
+      }
+      if (isMobile()) {
+        FastClick.attach(document.body);
+      }
+    });
+  </script>
+
+  
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/lazyload.js"></script>
+  <script type="text/javascript">
+    $(function () {
+      $("#posts").find('img').lazyload({
+        placeholder: "/images/loading.gif",
+        effect: "fadeIn"
+      });
+    });
+  </script>
+</body>
+</html>
