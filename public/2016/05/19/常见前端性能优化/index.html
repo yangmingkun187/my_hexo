@@ -42,16 +42,16 @@
   <link rel="shorticon icon" type="image/x-icon" href="/favicon.ico?v=0.4.5.1" />
 
 
-<meta name="description" content="记录一些前端性能优化的解决方案,其中有些是现在项目中已经用到,并且能够解决问题的方案,还有一些事并没有用到,但在以后的重构中会陆续用到的方案">
+<meta name="description" content="记录一些前端性能优化的解决方案,其中有些是现在项目中已经用到,并且能够解决问题的方案,还有一些事并没有用到,但在以后的重构中会陆续用到的方案;前端优化不完全指南">
 <meta property="og:type" content="article">
 <meta property="og:title" content="前端优化">
 <meta property="og:url" content="http://www.jasonyangblog.com/2016/05/19/常见前端性能优化/index.html">
 <meta property="og:site_name" content="JasonYang Notes">
-<meta property="og:description" content="记录一些前端性能优化的解决方案,其中有些是现在项目中已经用到,并且能够解决问题的方案,还有一些事并没有用到,但在以后的重构中会陆续用到的方案">
-<meta property="og:updated_time" content="2016-06-06T09:19:19.000Z">
+<meta property="og:description" content="记录一些前端性能优化的解决方案,其中有些是现在项目中已经用到,并且能够解决问题的方案,还有一些事并没有用到,但在以后的重构中会陆续用到的方案;前端优化不完全指南">
+<meta property="og:updated_time" content="2016-06-16T03:52:28.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="前端优化">
-<meta name="twitter:description" content="记录一些前端性能优化的解决方案,其中有些是现在项目中已经用到,并且能够解决问题的方案,还有一些事并没有用到,但在以后的重构中会陆续用到的方案">
+<meta name="twitter:description" content="记录一些前端性能优化的解决方案,其中有些是现在项目中已经用到,并且能够解决问题的方案,还有一些事并没有用到,但在以后的重构中会陆续用到的方案;前端优化不完全指南">
 
 
 <script type="text/javascript" id="hexo.configuration">
@@ -272,7 +272,7 @@
       
 
       
-        <span itemprop="articleBody"><p>记录一些前端性能优化的解决方案,其中有些是现在项目中已经用到,并且能够解决问题的方案,还有一些事并没有用到,但在以后的重构中会陆续用到的方案<br><a id="more"></a></p>
+        <span itemprop="articleBody"><p>记录一些前端性能优化的解决方案,其中有些是现在项目中已经用到,并且能够解决问题的方案,还有一些事并没有用到,但在以后的重构中会陆续用到的方案;<br><a href="http://aotu.io/notes/2016/03/16/optimization/" target="_blank" rel="external">前端优化不完全指南</a><br><a id="more"></a></p>
 <h3 id="高清图适配优化">高清图适配优化</h3><h4 id="纯色图『2X』">纯色图『2X』</h4><p>一般是类似icon的图片,在网站中会用到的地方也非常的多,当此类小icon数量比较少的话,sprite图是一种解决方案.<br>但如果会用到许多此类图片时,全部合并成 sprite 图，图片的 K 数也会很大，而且后期如果有修改的话还得重新合并 sprite 图,<br>所以这种情况推荐使用iconfont图标.我一般用<a href="http://iconfont.cn/" target="_blank" rel="external">阿里巴巴矢量图标库</a></p>
 <h4 id="非纯色图">非纯色图</h4><p>非纯色图通常用『2X』图适配，适配方案可以有很多选择：媒体查询、srcset属性、image-set属性、脚本控制。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;img src=<span class="string">"images/demo@1x.png"</span> srcset=<span class="string">"images/demo@1x.png 1x, images/demo@2x.png 2x"</span> alt=<span class="string">""</span>&gt;</span><br></pre></td></tr></table></figure></p>
 <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="class">.chain_item_icon</span><span class="rules">&#123;</span><br><span class="line">    <span class="rule"><span class="attribute">background-image</span>:<span class="value"> <span class="function">-webkit-image-set</span>(<span class="function">url</span>(<span class="string">"images/demo@1x.png"</span>) <span class="number">1</span>x, <span class="function">url</span>(<span class="string">"images/demo@2x.png"</span>) <span class="number">2</span>x)</span></span>;</span><br><span class="line">    <span class="rule"><span class="attribute">background-image</span>:<span class="value"> <span class="function">image-set</span>(<span class="function">url</span>(<span class="string">"images/demo@1x.png"</span>) <span class="number">1</span>x, <span class="function">url</span>(<span class="string">"images/demo@2x.png"</span>) <span class="number">2</span>x)</span></span>;</span><br><span class="line">&#125;</span></span><br></pre></td></tr></table></figure>
