@@ -3,8 +3,8 @@ date: 2015-09-21 14:33:35
 tags: "Angularjs"
 categories: "Angularjs"
 ---
-使用Angularjs也有几个月了，在对这个比较新奇的框架赞美之外，也想把自己遇到的坑记录下来。
 <!-- more -->
+使用Angularjs也有几个月了，在对这个比较新奇的框架赞美之外，也想把自己遇到的坑记录下来。
 ### 最近写了一个angular的调用模态框+在模态框中滚动分页加载的组件
 
 [源码地址](https://github.com/yangmingkun187/angular_modal_scroll)

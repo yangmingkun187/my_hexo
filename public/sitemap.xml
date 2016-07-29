@@ -2,6 +2,31 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://www.jasonyangblog.com/2015/09/21/angularjs/</loc>
+    <lastmod>2016-07-29T09:38:54.000Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://www.jasonyangblog.com/2015/06/11/javascript%E4%B9%8B%E5%8E%9F%E7%94%9FAjax/</loc>
+    <lastmod>2016-07-29T09:38:54.000Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://www.jasonyangblog.com/2014/12/21/HTTP/</loc>
+    <lastmod>2016-07-29T09:38:54.000Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://www.jasonyangblog.com/2015/07/22/%E6%9E%84%E5%BB%BA%E5%B7%A5%E5%85%B7gulp/</loc>
+    <lastmod>2016-07-29T09:38:54.000Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://www.jasonyangblog.com/2015/10/27/angualr%E4%B8%AD%E7%9A%84service-provider-factory/</loc>
+    <lastmod>2016-07-29T09:38:54.000Z</lastmod>
+  </url>
+  
+  <url>
     <loc>http://www.jasonyangblog.com/2014/11/17/js%E9%81%8D%E5%8E%86%E6%95%B0%E7%BB%84/</loc>
     <lastmod>2016-07-29T09:31:31.000Z</lastmod>
   </url>
@@ -9,11 +34,6 @@
   <url>
     <loc>http://www.jasonyangblog.com/2016/03/29/css/</loc>
     <lastmod>2016-07-29T03:11:58.000Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://www.jasonyangblog.com/2015/09/21/angularjs/</loc>
-    <lastmod>2016-07-29T01:56:25.000Z</lastmod>
   </url>
   
   <url>
@@ -32,28 +52,8 @@
   </url>
   
   <url>
-    <loc>http://www.jasonyangblog.com/2015/07/22/%E6%9E%84%E5%BB%BA%E5%B7%A5%E5%85%B7gulp/</loc>
-    <lastmod>2016-06-04T03:22:14.000Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://www.jasonyangblog.com/2015/06/11/javascript%E4%B9%8B%E5%8E%9F%E7%94%9FAjax/</loc>
-    <lastmod>2015-10-30T03:33:40.000Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://www.jasonyangblog.com/2015/10/27/angualr%E4%B8%AD%E7%9A%84service-provider-factory/</loc>
-    <lastmod>2015-10-27T10:44:50.000Z</lastmod>
-  </url>
-  
-  <url>
     <loc>http://www.jasonyangblog.com/2016/10/21/P/</loc>
     <lastmod>2015-10-27T10:42:21.000Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://www.jasonyangblog.com/2014/12/21/HTTP/</loc>
-    <lastmod>2015-10-21T08:23:27.000Z</lastmod>
   </url>
   
   <url>

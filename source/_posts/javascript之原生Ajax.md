@@ -4,10 +4,11 @@ tags: "Javascript"
 categories: "Javascript"
 ---
 ### javascript原生ajax
+<!-- more -->
 以前写ajax都是用的jQuery，zepto封装过的，写起来很简单，也不用考虑浏览器兼容，最近看了一下ajax原生的写法，觉得木欲长固其根，这些东西还是需要了解。
 
 javascript提供了XMLHttpRequest这个对象，这也是实现ajax最基础的一个对象。
-<!-- more -->
+
 首先我们要创建一个XMLHttpRequest对象，考虑兼容性，具体写法如下：
 ``` javascript
 function createReq() {

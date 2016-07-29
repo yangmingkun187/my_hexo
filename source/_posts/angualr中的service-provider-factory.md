@@ -3,12 +3,12 @@ date: 2015-10-27 16:23:53
 tags: "Angularjs"
 categories: "Angularjs"
 ---
+<!-- more -->
 看着自己前段时间写的代码，发现controller中写了很多的业务逻辑，还记得当时自己还到处google如何在controller中保存数据。。。
 其实这并不符合angular的设计思想，出于内存性能的考虑，当我们切换页面的时候，angular会清空当前的controller，所以当我们需要使用一些持久的数据的时候，我们需要使用 **服务** 来保存。
 angular中提供了service provider factory这三种方法来创建 **服务**。
 当初自己查询如何创建自己的服务的时候，经常性的会搜出 关于这三种方法的区别 的文章。
 但是只看区别，不了解其原理的人都是耍流氓。
-<!-- more -->
 ### $provider
 $provide是在Auto模块中的一个服务，他有很多的方法，你可以使用$provide中的某一个方法来创建一个provider（其实，provider，value，constant，service，factory他们都是provider！），然后通过provide来定义服务。
 举个栗子：

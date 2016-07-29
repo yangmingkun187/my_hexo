@@ -42,16 +42,25 @@
   <link rel="shorticon icon" type="image/x-icon" href="/favicon.ico?v=0.4.5.1" />
 
 
-<meta name="description" content="使用Angularjs也有几个月了，在对这个比较新奇的框架赞美之外，也想把自己遇到的坑记录下来。">
+<meta name="description" content="使用Angularjs也有几个月了，在对这个比较新奇的框架赞美之外，也想把自己遇到的坑记录下来。
+最近写了一个angular的调用模态框+在模态框中滚动分页加载的组件源码地址demo地址
+对ng-click 进行trigger有一次做注册模块的时候，当用户出现登录注册信息错误或者网络错误的时候，异步请求回来会触发一次trigger事件，当时是这样写的：
+1angular.element(&apos;.ref">
 <meta property="og:type" content="article">
 <meta property="og:title" content="angularjs实践（有坑就记录）">
 <meta property="og:url" content="http://www.jasonyangblog.com/2015/09/21/angularjs/index.html">
 <meta property="og:site_name" content="JasonYang Notes">
-<meta property="og:description" content="使用Angularjs也有几个月了，在对这个比较新奇的框架赞美之外，也想把自己遇到的坑记录下来。">
-<meta property="og:updated_time" content="2016-07-29T01:56:25.000Z">
+<meta property="og:description" content="使用Angularjs也有几个月了，在对这个比较新奇的框架赞美之外，也想把自己遇到的坑记录下来。
+最近写了一个angular的调用模态框+在模态框中滚动分页加载的组件源码地址demo地址
+对ng-click 进行trigger有一次做注册模块的时候，当用户出现登录注册信息错误或者网络错误的时候，异步请求回来会触发一次trigger事件，当时是这样写的：
+1angular.element(&apos;.ref">
+<meta property="og:updated_time" content="2016-07-29T09:38:54.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="angularjs实践（有坑就记录）">
-<meta name="twitter:description" content="使用Angularjs也有几个月了，在对这个比较新奇的框架赞美之外，也想把自己遇到的坑记录下来。">
+<meta name="twitter:description" content="使用Angularjs也有几个月了，在对这个比较新奇的框架赞美之外，也想把自己遇到的坑记录下来。
+最近写了一个angular的调用模态框+在模态框中滚动分页加载的组件源码地址demo地址
+对ng-click 进行trigger有一次做注册模块的时候，当用户出现登录注册信息错误或者网络错误的时候，异步请求回来会触发一次trigger事件，当时是这样写的：
+1angular.element(&apos;.ref">
 
 
 <script type="text/javascript" id="hexo.configuration">
@@ -272,7 +281,8 @@
       
 
       
-        <span itemprop="articleBody"><p>使用Angularjs也有几个月了，在对这个比较新奇的框架赞美之外，也想把自己遇到的坑记录下来。<br><a id="more"></a></p>
+        <span itemprop="articleBody"><a id="more"></a>
+<p>使用Angularjs也有几个月了，在对这个比较新奇的框架赞美之外，也想把自己遇到的坑记录下来。</p>
 <h3 id="最近写了一个angular的调用模态框+在模态框中滚动分页加载的组件">最近写了一个angular的调用模态框+在模态框中滚动分页加载的组件</h3><p><a href="https://github.com/yangmingkun187/angular_modal_scroll" target="_blank" rel="external">源码地址</a><br><a href="http://jasonyangblog.com/angular_modal_scroll/index.html" target="_blank" rel="external">demo地址</a></p>
 <h3 id="对ng-click_进行trigger">对ng-click 进行trigger</h3><p>有一次做注册模块的时候，当用户出现登录注册信息错误或者网络错误的时候，异步请求回来会触发一次trigger事件，当时是这样写的：</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">angular.element(<span class="string">'.refresh'</span>).trigger(<span class="string">'click'</span>);<span class="comment">//refresh上绑了ng-click</span></span><br></pre></td></tr></table></figure>
