@@ -3,6 +3,7 @@ date: 2015-10-27 16:23:53
 tags: "Angularjs"
 categories: "Angularjs"
 ---
+自己对service provider factory的理解
 <!-- more -->
 看着自己前段时间写的代码，发现controller中写了很多的业务逻辑，还记得当时自己还到处google如何在controller中保存数据。。。
 其实这并不符合angular的设计思想，出于内存性能的考虑，当我们切换页面的时候，angular会清空当前的controller，所以当我们需要使用一些持久的数据的时候，我们需要使用 **服务** 来保存。

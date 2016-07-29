@@ -3,6 +3,7 @@ date: 2014-12-21 14:12:45
 tags: "HTTP"
 categories: "HTTP"
 ---
+记录HTTP协议详解
 <!-- more -->
 ### HTTP协议主要特点
 1. 支持客户/服务器模式

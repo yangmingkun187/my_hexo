@@ -3,8 +3,10 @@ date: 2015-6-11 10:26:18
 tags: "Javascript"
 categories: "Javascript"
 ---
-### javascript原生ajax
+自己整理的javascript之原生Ajax
 <!-- more -->
+### javascript原生ajax
+
 以前写ajax都是用的jQuery，zepto封装过的，写起来很简单，也不用考虑浏览器兼容，最近看了一下ajax原生的写法，觉得木欲长固其根，这些东西还是需要了解。
 
 javascript提供了XMLHttpRequest这个对象，这也是实现ajax最基础的一个对象。

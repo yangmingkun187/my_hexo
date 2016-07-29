@@ -42,21 +42,18 @@
   <link rel="shorticon icon" type="image/x-icon" href="/favicon.ico?v=0.4.5.1" />
 
 
-<meta name="description" content="gulp总结以前也是浅尝辄止的用过grunt，但是尝的不是怎么明白，因为grunt配置的东西比较多，会引用大量你实际上并不需要的对象属性，Grunt比Gulp更加频繁地操作文件系统，使用数据流的Gulp总是比Grunt快。对于一个小的LESS文件，gulpfile.js通常需要6ms，而gruntfile.js则需要大概50ms——慢8倍多。
-安装gulp先全局装一遍1npm install gu">
+<meta name="description" content="gulp初探">
 <meta property="og:type" content="article">
 <meta property="og:title" content="构建工具gulp">
 <meta property="og:url" content="http://www.jasonyangblog.com/2015/07/22/构建工具gulp/index.html">
 <meta property="og:site_name" content="JasonYang Notes">
-<meta property="og:description" content="gulp总结以前也是浅尝辄止的用过grunt，但是尝的不是怎么明白，因为grunt配置的东西比较多，会引用大量你实际上并不需要的对象属性，Grunt比Gulp更加频繁地操作文件系统，使用数据流的Gulp总是比Grunt快。对于一个小的LESS文件，gulpfile.js通常需要6ms，而gruntfile.js则需要大概50ms——慢8倍多。
-安装gulp先全局装一遍1npm install gu">
+<meta property="og:description" content="gulp初探">
 <meta property="og:image" content="http://p7.qhimg.com/t01b21adb0b23364a0c.gif">
 <meta property="og:image" content="http://p4.qhimg.com/t011034e5a90ce13015.gif">
-<meta property="og:updated_time" content="2016-07-29T09:38:54.000Z">
+<meta property="og:updated_time" content="2016-07-29T09:44:55.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="构建工具gulp">
-<meta name="twitter:description" content="gulp总结以前也是浅尝辄止的用过grunt，但是尝的不是怎么明白，因为grunt配置的东西比较多，会引用大量你实际上并不需要的对象属性，Grunt比Gulp更加频繁地操作文件系统，使用数据流的Gulp总是比Grunt快。对于一个小的LESS文件，gulpfile.js通常需要6ms，而gruntfile.js则需要大概50ms——慢8倍多。
-安装gulp先全局装一遍1npm install gu">
+<meta name="twitter:description" content="gulp初探">
 
 
 <script type="text/javascript" id="hexo.configuration">
@@ -277,7 +274,7 @@
       
 
       
-        <span itemprop="articleBody"><a id="more"></a>
+        <span itemprop="articleBody"><p>gulp初探<br><a id="more"></a></p>
 <h3 id="gulp总结">gulp总结</h3><p>以前也是浅尝辄止的用过grunt，但是尝的不是怎么明白，因为grunt配置的东西比较多，会引用大量你实际上并不需要的对象属性，Grunt比Gulp更加频繁地操作文件系统，使用数据流的Gulp总是比Grunt快。对于一个小的LESS文件，gulpfile.js通常需要6ms，而gruntfile.js则需要大概50ms——慢8倍多。</p>
 <h3 id="安装gulp">安装gulp</h3><p>先全局装一遍<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm <span class="operator"><span class="keyword">install</span> gulp -<span class="keyword">g</span></span></span><br></pre></td></tr></table></figure></p>
 <p>然后进项目里面再装一遍<br><figure class="highlight q"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install gulp --<span class="built_in">save</span>-<span class="built_in">dev</span></span><br></pre></td></tr></table></figure></p>

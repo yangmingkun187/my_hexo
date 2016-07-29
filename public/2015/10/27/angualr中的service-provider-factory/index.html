@@ -42,16 +42,16 @@
   <link rel="shorticon icon" type="image/x-icon" href="/favicon.ico?v=0.4.5.1" />
 
 
-<meta name="description" content="看着自己前段时间写的代码，发现controller中写了很多的业务逻辑，还记得当时自己还到处google如何在controller中保存数据。。。其实这并不符合angular的设计思想，出于内存性能的考虑，当我们切换页面的时候，angular会清空当前的controller，所以当我们需要使用一些持久的数据的时候，我们需要使用 服务 来保存。angular中提供了service provider">
+<meta name="description" content="自己对service provider factory的理解">
 <meta property="og:type" content="article">
 <meta property="og:title" content="angualr中的service provider factory">
 <meta property="og:url" content="http://www.jasonyangblog.com/2015/10/27/angualr中的service-provider-factory/index.html">
 <meta property="og:site_name" content="JasonYang Notes">
-<meta property="og:description" content="看着自己前段时间写的代码，发现controller中写了很多的业务逻辑，还记得当时自己还到处google如何在controller中保存数据。。。其实这并不符合angular的设计思想，出于内存性能的考虑，当我们切换页面的时候，angular会清空当前的controller，所以当我们需要使用一些持久的数据的时候，我们需要使用 服务 来保存。angular中提供了service provider">
-<meta property="og:updated_time" content="2016-07-29T09:38:54.000Z">
+<meta property="og:description" content="自己对service provider factory的理解">
+<meta property="og:updated_time" content="2016-07-29T09:41:34.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="angualr中的service provider factory">
-<meta name="twitter:description" content="看着自己前段时间写的代码，发现controller中写了很多的业务逻辑，还记得当时自己还到处google如何在controller中保存数据。。。其实这并不符合angular的设计思想，出于内存性能的考虑，当我们切换页面的时候，angular会清空当前的controller，所以当我们需要使用一些持久的数据的时候，我们需要使用 服务 来保存。angular中提供了service provider">
+<meta name="twitter:description" content="自己对service provider factory的理解">
 
 
 <script type="text/javascript" id="hexo.configuration">
@@ -272,8 +272,7 @@
       
 
       
-        <span itemprop="articleBody"><a id="more"></a>
-<p>看着自己前段时间写的代码，发现controller中写了很多的业务逻辑，还记得当时自己还到处google如何在controller中保存数据。。。<br>其实这并不符合angular的设计思想，出于内存性能的考虑，当我们切换页面的时候，angular会清空当前的controller，所以当我们需要使用一些持久的数据的时候，我们需要使用 <strong>服务</strong> 来保存。<br>angular中提供了service provider factory这三种方法来创建 <strong>服务</strong>。<br>当初自己查询如何创建自己的服务的时候，经常性的会搜出 关于这三种方法的区别 的文章。<br>但是只看区别，不了解其原理的人都是耍流氓。</p>
+        <span itemprop="articleBody"><p>自己对service provider factory的理解<br><a id="more"></a><br>看着自己前段时间写的代码，发现controller中写了很多的业务逻辑，还记得当时自己还到处google如何在controller中保存数据。。。<br>其实这并不符合angular的设计思想，出于内存性能的考虑，当我们切换页面的时候，angular会清空当前的controller，所以当我们需要使用一些持久的数据的时候，我们需要使用 <strong>服务</strong> 来保存。<br>angular中提供了service provider factory这三种方法来创建 <strong>服务</strong>。<br>当初自己查询如何创建自己的服务的时候，经常性的会搜出 关于这三种方法的区别 的文章。<br>但是只看区别，不了解其原理的人都是耍流氓。</p>
 <h3 id="$provider">$provider</h3><p>$provide是在Auto模块中的一个服务，他有很多的方法，你可以使用$provide中的某一个方法来创建一个provider（其实，provider，value，constant，service，factory他们都是provider！），然后通过provide来定义服务。<br>举个栗子：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">angular.module(<span class="string">'app'</span>, []).config(<span class="function"><span class="keyword">function</span>(<span class="params">$provide</span>) </span>&#123;</span><br><span class="line">  $provide.provider(<span class="string">'example'</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">this</span>.$get = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">      <span class="keyword">return</span> <span class="function"><span class="keyword">function</span>(<span class="params">x</span>) </span>&#123;</span><br><span class="line">        <span class="built_in">console</span>.log(x);</span><br><span class="line">      &#125;;</span><br><span class="line">    &#125;;</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></p>
 <p>其实这就是最基本的写法，service provider factory的区别就是，factory service其实就是基于provider的封装，<br>下面介绍一下provider。</p>
 <h3 id="provider">provider</h3><p>provider有且必须有一个$get方法，在$get方法中我们需先定义一个对象，给这个对象添加属性和方法，然后返回这个对象，$get方法返回的这个对象就是这个服务的一个实例。而且需要注意的是provider是唯一一种可以被 .config() 函数配置的服务。当你想要在 service 对象启用之前，先进行模块范围的配置，那就应该用 provider。</p>
