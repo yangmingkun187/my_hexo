@@ -3,7 +3,7 @@ date: 2014-11-17 17:52:04
 tags: "Javascript"
 categories: "Javascript"
 ---
-记录一些js的奇技淫巧
+记录一些js的东西
 <!-- more -->
 ### 数组合并
 一般是使用concat函数来进行数组合并,但是如果两个数组很大的时候,会消耗大量的内存来存储新创建的数组.
