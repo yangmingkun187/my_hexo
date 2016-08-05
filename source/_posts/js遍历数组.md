@@ -181,6 +181,21 @@ console.log(originArray);// [1,2,3,4]
 console.log(newArray);// [1,2,3]
 ```
 
+### 数字数组去除,效率很高(先把数组排序，然后比较相邻的两个值)
+``` javascript
+Array.prototype.unique = function()
+{
+	this.sort();
+	var resultArray=[this[0]];
+	for(var i = 1; i < this.length; i++) {
+		if( this[i] !== resultArray[resultArray.length-1]) {
+			resultArray.push(this[i]);
+		}
+	}
+	return resultArray;
+}
+```
+
 ### js遍历数组
 
 ##### 一般写法

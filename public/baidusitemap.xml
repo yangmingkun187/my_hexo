@@ -3,6 +3,26 @@
 
     
   <url>
+    <loc>http://www.jasonyangblog.com/2014/11/17/js%E9%81%8D%E5%8E%86%E6%95%B0%E7%BB%84/</loc>
+    <lastmod>2016-08-05T08:40:03.000Z</lastmod>
+    <data>
+        <display>
+        <title>js一些基础的东西</title>
+        <pubTime>2014-11-17T09:52:04.000Z</pubTime>
+        
+        <tag>Javascript </tag>
+         
+         
+           
+             
+              <breadCrumb title="Javascript" url="http://www.jasonyangblog.com/categories/Javascript/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://www.jasonyangblog.com/2015/09/21/angularjs/</loc>
     <lastmod>2016-07-29T09:44:55.000Z</lastmod>
     <data>
@@ -96,26 +116,6 @@
            
              
               <breadCrumb title="Angularjs" url="http://www.jasonyangblog.com/categories/Angularjs/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://www.jasonyangblog.com/2014/11/17/js%E9%81%8D%E5%8E%86%E6%95%B0%E7%BB%84/</loc>
-    <lastmod>2016-07-29T09:31:31.000Z</lastmod>
-    <data>
-        <display>
-        <title>js一些基础的东西</title>
-        <pubTime>2014-11-17T09:52:04.000Z</pubTime>
-        
-        <tag>Javascript </tag>
-         
-         
-           
-             
-              <breadCrumb title="Javascript" url="http://www.jasonyangblog.com/categories/Javascript/"/>
           
         </display>
     </data>
