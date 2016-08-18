@@ -226,3 +226,6 @@ for (var i = 0, item; item = array[i++];) {
 	// array[i]
 }
 ```
+
+### String和Array方法的总结图
+![](http://jasonyangblog.com/upload/string&Array.png)
