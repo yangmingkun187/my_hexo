@@ -34,6 +34,13 @@ table { border-collapse: collapse; border-spacing: 0; }
 img { border: 0; max-width: 100%; }
 ```
 
+### 在可点击的项目上强制手型
+``` css
+a[href], input[type='submit'], input[type='image'], label[for], select, button, .pointer {
+    cursor: pointer;
+}
+```
+
 ### 用CSS动画实现省略号动画
 这个片段将帮助你制造一个ellipsis的动画，对于简单的加载状态是很有用的，而不用去使用gif图像。
 ``` css
@@ -149,3 +156,26 @@ h1 {
 ![](http://jasonyangblog.com/upload/flexbox-s12.jpg)
 #### 换行：指定伸缩项目是否沿着侧轴排列
 ![](http://jasonyangblog.com/upload/flexbox-s13.jpg)
+
+### CSS3：全屏背景
+``` css
+html { 
+    background: url('images/bg.jpg') no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+```
+
+### 禁用移动Webkit的选择高亮
+``` css
+body {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+```
