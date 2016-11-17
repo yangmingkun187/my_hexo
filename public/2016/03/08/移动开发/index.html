@@ -5,7 +5,7 @@
   
 
 
-<html class="theme-next muse use-motion">
+<html class="theme-next mist use-motion">
 <head>
   <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
@@ -91,7 +91,7 @@
 <meta property="og:site_name" content="JasonYang Notes">
 <meta property="og:description" content="记录自己在移动端web开发中遇到的问题。">
 <meta property="og:image" content="http://gtms01.alicdn.com/tps/i1/T1N9rZFdddXXbZIE3X-1200-900.png">
-<meta property="og:updated_time" content="2016-06-04T03:42:03.000Z">
+<meta property="og:updated_time" content="2016-11-17T01:57:02.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="移动开发">
 <meta name="twitter:description" content="记录自己在移动端web开发中遇到的问题。">
@@ -101,7 +101,7 @@
 <script type="text/javascript" id="hexo.configuration">
   var NexT = window.NexT || {};
   var CONFIG = {
-    scheme: 'Muse',
+    scheme: 'Mist',
     sidebar: {"position":"left","display":"post"},
     fancybox: true,
     motion: true,
@@ -189,6 +189,22 @@
         </li>
       
         
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+            关于
+          </a>
+        </li>
+      
+        
         <li class="menu-item menu-item-archives">
           <a href="/archives" rel="section">
             
@@ -201,14 +217,6 @@
           <a href="/tags" rel="section">
             
             标签
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-schedule">
-          <a href="/schedule" rel="section">
-            
-            日程
           </a>
         </li>
       
@@ -367,6 +375,10 @@
 <li>使用块级元素作为flex元素的子元素；<br>Android Browser4.3及以下，iOS Safari6.1及以下 的 flex子项 需要使用块级元素，在这些版本之上还可以使用行内块元素<br>在这些版本中，如果你发现flex子项之间出现了间隙，或者在未定义换行的情况下子项自身抑或子项之间换行了，或者出现了其它不正常的情况，那么仔细看一下flex子项可能是使用了行内级元素；</li>
 <li>当横向布局时，给flex元素的子元素定义width为非auto的值，当纵向布局时，给flex元素的子元素定义height为非auto的值；<br>Android Browser4.3及以下，iOS Safari6.1及以下的flex元素的子元素如果没有显式的定义height或width为非auto的值，那么子元素分配父元素剩余空间时将会不符合标准预期；</li>
 </ul>
+<h4 id="边框圆角致背景溢出">边框圆角致背景溢出</h4><p>如果一个元素定义了 border + border-radius，这时如果该元素有背景，那么在某些安卓机上背景将会溢出圆角之外。</p>
+<p>之所以会出现这个问题：其主要原因是因为CSS对背景裁剪（background-clip）有不同的处理方式，通常它可以是 border-box | padding-box | content-box 这3种方式。</p>
+<p>浏览器的默认裁减方式是 border-box，即溢出 border 之外的背景都将被裁减。</p>
+<p>对于上述无法裁减边框之外背景的手机，将值定义为 padding-box | content-box 都能fix这问题，不过更推荐使用 padding-box。因为使用 content-box，如果定义了 padding 不为 0，背景将无法铺满元素。</p>
 <h4 id="css画一个圆">css画一个圆</h4><p>用CSS画一个圆很简单，只需要一句代码：<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="class">.circle</span> <span class="rules">&#123;</span><br><span class="line">    <span class="rule"><span class="attribute">border-radius</span>:<span class="value"> <span class="number">50%</span></span></span>;</span><br><span class="line">&#125;</span></span><br></pre></td></tr></table></figure></p>
 <p>但是Android Browser2.0 不支持以百分比作为 <code>border-radius</code> 的值，所以会显示为默认的矩形。<br>解决办法(给定数值)：<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="class">.circle</span> <span class="rules">&#123;</span><br><span class="line">    <span class="rule"><span class="attribute">width</span>:<span class="value"> <span class="number">10rem</span></span></span>;</span><br><span class="line">    <span class="rule"><span class="attribute">height</span>:<span class="value"> <span class="number">10rem</span></span></span>;</span><br><span class="line">    <span class="rule"><span class="attribute">border-radius</span>:<span class="value"> <span class="number">5rem</span></span></span>;</span><br><span class="line">&#125;</span></span><br></pre></td></tr></table></figure></p>
 <h3 id="三，移动端渲染问题汇总">三，移动端渲染问题汇总</h3><h4 id="使用rem解决不同屏幕大小的字号显示">使用rem解决不同屏幕大小的字号显示</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">(<span class="function"><span class="keyword">function</span> (<span class="params">doc, win</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">var</span> docEl = doc.documentElement,</span><br><span class="line">    resizeEvt = <span class="string">'orientationchange'</span> <span class="keyword">in</span> <span class="built_in">window</span> ? <span class="string">'orientationchange'</span> : <span class="string">'resize'</span>,</span><br><span class="line">    recalc = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">      <span class="keyword">var</span> clientWidth = docEl.clientWidth;</span><br><span class="line">      <span class="keyword">if</span> (!clientWidth) <span class="keyword">return</span>;</span><br><span class="line">      docEl.style.fontSize = <span class="number">20</span> * (clientWidth / <span class="number">320</span>) + <span class="string">'px'</span>;</span><br><span class="line">    &#125;;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">if</span> (!doc.addEventListener) <span class="keyword">return</span>;</span><br><span class="line">  win.addEventListener(resizeEvt, recalc, <span class="literal">false</span>);</span><br><span class="line">  doc.addEventListener(<span class="string">'DOMContentLoaded'</span>, recalc, <span class="literal">false</span>);</span><br><span class="line">&#125;)(<span class="built_in">document</span>, <span class="built_in">window</span>);</span><br></pre></td></tr></table></figure>
@@ -506,10 +518,10 @@
 
           
             <div class="site-state-item site-state-categories">
-              
+              <a href="/categories">
                 <span class="site-state-item-count">7</span>
                 <span class="site-state-item-name">分类</span>
-              
+              </a>
             </div>
           
 
@@ -557,7 +569,7 @@
               </span>
             
               <span class="links-of-author-item">
-                <a href="http://www.zhihu.com/people/yang-ming-kun-34" target="_blank" title="zhihu">
+                <a href="http://www.zhihu.com/people/yang-ming-kun-187" target="_blank" title="zhihu">
                   
                     <i class="fa fa-fw fa-globe"></i>
                   
@@ -583,7 +595,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#一，页面点击事件问题汇总"><span class="nav-number">1.</span> <span class="nav-text">一，页面点击事件问题汇总</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#移动端tab事件，label_、img点击后会出现半透明黑框"><span class="nav-number">1.1.</span> <span class="nav-text">移动端tab事件，label 、img点击后会出现半透明黑框</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#移动端点击事件"><span class="nav-number">1.2.</span> <span class="nav-text">移动端点击事件</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#二，移动端css兼容性问题汇总"><span class="nav-number">2.</span> <span class="nav-text">二，移动端css兼容性问题汇总</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#flex布局问题"><span class="nav-number">2.1.</span> <span class="nav-text">flex布局问题</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#css画一个圆"><span class="nav-number">2.2.</span> <span class="nav-text">css画一个圆</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#三，移动端渲染问题汇总"><span class="nav-number">3.</span> <span class="nav-text">三，移动端渲染问题汇总</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#使用rem解决不同屏幕大小的字号显示"><span class="nav-number">3.1.</span> <span class="nav-text">使用rem解决不同屏幕大小的字号显示</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#避免首屏图片或者内容挤住一坨"><span class="nav-number">3.2.</span> <span class="nav-text">避免首屏图片或者内容挤住一坨</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#UC浏览器下使用rem的问题"><span class="nav-number">3.3.</span> <span class="nav-text">UC浏览器下使用rem的问题</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#高清屏1px的问题"><span class="nav-number">3.4.</span> <span class="nav-text">高清屏1px的问题</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#四，移动端切屏问题汇总"><span class="nav-number">4.</span> <span class="nav-text">四，移动端切屏问题汇总</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#同屏切换的问题"><span class="nav-number">4.1.</span> <span class="nav-text">同屏切换的问题</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#移动端滑动切屏（当滑动过快时，注意当前的页面是否是touchstart时的页面，需做判断）"><span class="nav-number">4.2.</span> <span class="nav-text">移动端滑动切屏（当滑动过快时，注意当前的页面是否是touchstart时的页面，需做判断）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#微信web开发，当使用transform+transition进行切屏时，由于性能问题在部分安卓中，会出现切回原页面后不能滑动的问题"><span class="nav-number">4.3.</span> <span class="nav-text">微信web开发，当使用transform+transition进行切屏时，由于性能问题在部分安卓中，会出现切回原页面后不能滑动的问题</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#五，莫名其妙的问题汇总"><span class="nav-number">5.</span> <span class="nav-text">五，莫名其妙的问题汇总</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#安卓机当在页面上有input框时，input框获取焦点时，键盘升上来时，html会被压缩，导致出现白底"><span class="nav-number">5.1.</span> <span class="nav-text">安卓机当在页面上有input框时，input框获取焦点时，键盘升上来时，html会被压缩，导致出现白底</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#iscroll5_的上拉加载，下拉刷新"><span class="nav-number">5.2.</span> <span class="nav-text">iscroll5 的上拉加载，下拉刷新</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#标签跳转后保存表单数据"><span class="nav-number">5.3.</span> <span class="nav-text">标签跳转后保存表单数据</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#当在可滚动区域里面设置_-webkit-overflow-scrolling:touch_时,在ios下使用fixed布局滑动时会出现抖动"><span class="nav-number">5.4.</span> <span class="nav-text">当在可滚动区域里面设置 -webkit-overflow-scrolling:touch 时,在ios下使用fixed布局滑动时会出现抖动</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#一，页面点击事件问题汇总"><span class="nav-number">1.</span> <span class="nav-text">一，页面点击事件问题汇总</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#移动端tab事件，label_、img点击后会出现半透明黑框"><span class="nav-number">1.1.</span> <span class="nav-text">移动端tab事件，label 、img点击后会出现半透明黑框</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#移动端点击事件"><span class="nav-number">1.2.</span> <span class="nav-text">移动端点击事件</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#二，移动端css兼容性问题汇总"><span class="nav-number">2.</span> <span class="nav-text">二，移动端css兼容性问题汇总</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#flex布局问题"><span class="nav-number">2.1.</span> <span class="nav-text">flex布局问题</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#边框圆角致背景溢出"><span class="nav-number">2.2.</span> <span class="nav-text">边框圆角致背景溢出</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#css画一个圆"><span class="nav-number">2.3.</span> <span class="nav-text">css画一个圆</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#三，移动端渲染问题汇总"><span class="nav-number">3.</span> <span class="nav-text">三，移动端渲染问题汇总</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#使用rem解决不同屏幕大小的字号显示"><span class="nav-number">3.1.</span> <span class="nav-text">使用rem解决不同屏幕大小的字号显示</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#避免首屏图片或者内容挤住一坨"><span class="nav-number">3.2.</span> <span class="nav-text">避免首屏图片或者内容挤住一坨</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#UC浏览器下使用rem的问题"><span class="nav-number">3.3.</span> <span class="nav-text">UC浏览器下使用rem的问题</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#高清屏1px的问题"><span class="nav-number">3.4.</span> <span class="nav-text">高清屏1px的问题</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#四，移动端切屏问题汇总"><span class="nav-number">4.</span> <span class="nav-text">四，移动端切屏问题汇总</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#同屏切换的问题"><span class="nav-number">4.1.</span> <span class="nav-text">同屏切换的问题</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#移动端滑动切屏（当滑动过快时，注意当前的页面是否是touchstart时的页面，需做判断）"><span class="nav-number">4.2.</span> <span class="nav-text">移动端滑动切屏（当滑动过快时，注意当前的页面是否是touchstart时的页面，需做判断）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#微信web开发，当使用transform+transition进行切屏时，由于性能问题在部分安卓中，会出现切回原页面后不能滑动的问题"><span class="nav-number">4.3.</span> <span class="nav-text">微信web开发，当使用transform+transition进行切屏时，由于性能问题在部分安卓中，会出现切回原页面后不能滑动的问题</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#五，莫名其妙的问题汇总"><span class="nav-number">5.</span> <span class="nav-text">五，莫名其妙的问题汇总</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#安卓机当在页面上有input框时，input框获取焦点时，键盘升上来时，html会被压缩，导致出现白底"><span class="nav-number">5.1.</span> <span class="nav-text">安卓机当在页面上有input框时，input框获取焦点时，键盘升上来时，html会被压缩，导致出现白底</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#iscroll5_的上拉加载，下拉刷新"><span class="nav-number">5.2.</span> <span class="nav-text">iscroll5 的上拉加载，下拉刷新</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#标签跳转后保存表单数据"><span class="nav-number">5.3.</span> <span class="nav-text">标签跳转后保存表单数据</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#当在可滚动区域里面设置_-webkit-overflow-scrolling:touch_时,在ios下使用fixed布局滑动时会出现抖动"><span class="nav-number">5.4.</span> <span class="nav-text">当在可滚动区域里面设置 -webkit-overflow-scrolling:touch 时,在ios下使用fixed布局滑动时会出现抖动</span></a></li></ol></li></ol></div>
             
           </div>
         </section>
@@ -616,7 +628,7 @@
 <div class="theme-info">
   主题 -
   <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
-    NexT.Muse
+    NexT.Mist
   </a>
 </div>
 

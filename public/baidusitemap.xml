@@ -3,6 +3,41 @@
 
     
   <url>
+    <loc>http://www.jasonyangblog.com/2016/03/08/%E7%A7%BB%E5%8A%A8%E5%BC%80%E5%8F%91/</loc>
+    <lastmod>2016-11-17T01:57:02.000Z</lastmod>
+    <data>
+        <display>
+        <title>移动开发</title>
+        <pubTime>2016-03-08T10:15:19.000Z</pubTime>
+        
+        <tag>移动端web开发 </tag>
+         
+         
+           
+             
+              <breadCrumb title="移动端web开发" url="http://www.jasonyangblog.com/categories/%E7%A7%BB%E5%8A%A8%E7%AB%AFweb%E5%BC%80%E5%8F%91/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://www.jasonyangblog.com/2017/10/21/P/</loc>
+    <lastmod>2016-11-04T04:44:38.000Z</lastmod>
+    <data>
+        <display>
+        <title></title>
+        <pubTime>2017-10-21T06:33:35.000Z</pubTime>
+        
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://www.jasonyangblog.com/2016/11/03/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/</loc>
     <lastmod>2016-11-04T02:38:12.000Z</lastmod>
     <data>
@@ -78,19 +113,19 @@
 
     
   <url>
-    <loc>http://www.jasonyangblog.com/2014/12/21/HTTP/</loc>
+    <loc>http://www.jasonyangblog.com/2015/09/21/angularjs/</loc>
     <lastmod>2016-07-29T09:44:55.000Z</lastmod>
     <data>
         <display>
-        <title>HTTP协议详解</title>
-        <pubTime>2014-12-21T06:12:45.000Z</pubTime>
+        <title>angularjs实践（有坑就记录）</title>
+        <pubTime>2015-09-21T06:33:35.000Z</pubTime>
         
-        <tag>HTTP </tag>
+        <tag>Angularjs </tag>
          
          
            
              
-              <breadCrumb title="HTTP" url="http://www.jasonyangblog.com/categories/HTTP/"/>
+              <breadCrumb title="Angularjs" url="http://www.jasonyangblog.com/categories/Angularjs/"/>
           
         </display>
     </data>
@@ -118,19 +153,19 @@
 
     
   <url>
-    <loc>http://www.jasonyangblog.com/2015/09/21/angularjs/</loc>
+    <loc>http://www.jasonyangblog.com/2014/12/21/HTTP/</loc>
     <lastmod>2016-07-29T09:44:55.000Z</lastmod>
     <data>
         <display>
-        <title>angularjs实践（有坑就记录）</title>
-        <pubTime>2015-09-21T06:33:35.000Z</pubTime>
+        <title>HTTP协议详解</title>
+        <pubTime>2014-12-21T06:12:45.000Z</pubTime>
         
-        <tag>Angularjs </tag>
+        <tag>HTTP </tag>
          
          
            
              
-              <breadCrumb title="Angularjs" url="http://www.jasonyangblog.com/categories/Angularjs/"/>
+              <breadCrumb title="HTTP" url="http://www.jasonyangblog.com/categories/HTTP/"/>
           
         </display>
     </data>
@@ -177,41 +212,6 @@
     </url>
 
     
-    
-  <url>
-    <loc>http://www.jasonyangblog.com/2016/03/08/%E7%A7%BB%E5%8A%A8%E5%BC%80%E5%8F%91/</loc>
-    <lastmod>2016-06-04T03:42:03.000Z</lastmod>
-    <data>
-        <display>
-        <title>移动开发</title>
-        <pubTime>2016-03-08T10:15:19.000Z</pubTime>
-        
-        <tag>移动端web开发 </tag>
-         
-         
-           
-             
-              <breadCrumb title="移动端web开发" url="http://www.jasonyangblog.com/categories/%E7%A7%BB%E5%8A%A8%E7%AB%AFweb%E5%BC%80%E5%8F%91/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://www.jasonyangblog.com/2016/10/21/P/</loc>
-    <lastmod>2015-10-27T10:42:21.000Z</lastmod>
-    <data>
-        <display>
-        <title></title>
-        <pubTime>2016-10-21T06:33:35.000Z</pubTime>
-        
-         
-           
-        </display>
-    </data>
-    </url>
-
     
   <url>
     <loc>http://www.jasonyangblog.com/2014/11/11/hello-world/</loc>
