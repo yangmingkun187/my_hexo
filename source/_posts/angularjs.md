@@ -5,7 +5,41 @@ categories: "Angularjs"
 ---
 自己对ng1的实践
 <!-- more -->
-使用Angularjs也有几个月了，在对这个比较新奇的框架赞美之外，也想把自己遇到的坑记录下来。
+### $http 拦截器
+最近后台系统有这么一个需求:
+由于历史遗留问题,在系统中的所有异步操作都需要验证用户的登录状态,初步定的是在异步操作成功的回调函数中加入对返回值的判断
+,但是因为有多个系统且相应的js,页面都很多,所以改起来很麻烦.
+所以我提出了两个解决方案,一个是重写$http,然后全局替换$http就行了,
+还有一种就是使用$http拦截器.这样就只需要注入就可以实现之前的功能了.
+angular的$http的拦截器其实就是一个简单的factory:
+``` javascript
+angular.module('app',[]).factory('httpInterceptor', ['$q', function($q) {
+    var responseInterceptor = {
+    
+        response: function(response) {
+            var deferred = $q.defer(); // 获取deffered 实例
+            
+            // 当 response 中的data.code字段为-1时,证明用户登录状态过期,需要重新登录
+            // 不为-1时,进行之前正常的流程
+            if(response.data.code == -1) {
+                location.href = '/login'
+            } else {
+                deferred.resolve(response); // 传入promise
+            }
+            
+            return deferred.promise;
+        }
+        // request requestError responseError原理同上
+        // 这里也可以在拦截器中使用异步操作,AngularJS 允许我们返回一个 promise 延后处理,它会在请求拦截器中延迟发送请求或者在响应拦截器中推迟响应。
+        
+    };
+
+    return responseInterceptor;
+}]).config(['$httpProvider', function($httpProvider) { //注册
+   $httpProvider.interceptors.push('httpInterceptor');
+}])
+```
+
 ### 最近写了一个angular的调用模态框+在模态框中滚动分页加载的组件
 
 [源码地址](https://github.com/yangmingkun187/angular_modal_scroll)
